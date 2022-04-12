@@ -14,7 +14,7 @@ var buttoon
 
 
 let Flag = 0;
-let X = Math.min(innerWidth, innerHeight) * 0.7;
+let X = Math.min(innerWidth, innerHeight) * 0.9;
 var rParticle = X*0.0172;
 var rPlinko = X*0.02;
 function setup() {
