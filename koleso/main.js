@@ -1,24 +1,30 @@
 
 let canvas = document.getElementById("canvas");
 
-let sections = ["0.00×", "30.00×", "0.00×", "4.00×", "0.00×",
-    "1.70×", "0.00×", "2.00×", "0.00×", "1.50×",
-    "0.00×", "1.50×", "0.00×", "1.50×", "0.00×", "1.70×", "0.00×",
-    "2.00×", "0.00×", "1.50×", "0.00×", "2.00×",
-    "0.00×", "4.00×","0.00×", "2.00×", "0.00×", "2.00×", "0.00×",
-    "1.50×" ];
+let sections = ["0.00×", "30.00×", "0.00×", "3.00×", "0.00×",
+    "1.70×", "0.00×", "1.30×", "0.00×", "1.10×",
+    "0.00×", "1.10×", "0.00×", "1.10×", "0.00×", "1.70×", "0.00×",
+    "1.30×", "0.00×", "1.10×", "0.00×", "1.30×",
+    "0.00×", "3.00×","0.00×", "1.30×", "0.00×", "1.30×", "0.00×",
+    "1.10×" ];
+
+
+let massiv = [0, 30, 0, 3, 0, 1.7, 0, 1.3, 0 ,1.1, 0, 1.1, 0, 1.1, 0, 1.7, 0,
+              1.3, 0, 1.1, 0, 1.3, 0, 3, 0, 1.3 ,0, 1.3, 0, 1.1]
 
 let colors = ["#406c81", "#7e46fc", "#406c81", "#fba22f","#406c81","#d4e7f1","#406c81","#fce805",
     "#406c81","#00e304","#406c81","#00e304","#406c81","#00e304","#406c81","#d4e7f1",
     "#406c81","#fce805","#406c81","#00e304","#406c81","#fce805","#406c81","#fba22f",
     "#406c81","#fce805","#406c81","#fce805","#406c81","#00e304"];
 
+let balance = 5000;
+
 let wheels = null;
 let frame = null;
 let text = null;
 
 function repaint(angle) {
-    let r = Math.min(innerWidth, innerHeight) * 0.3;
+    let r = Math.min(innerWidth, innerHeight) * 0.30;
     if (wheels === null) {
         wheels = [];
         for (let selected=0; selected<sections.length; selected++) {
@@ -91,7 +97,7 @@ function repaint(angle) {
 
     canvas.width = innerWidth;
     canvas.height = innerHeight;
-    let cx = innerWidth/2, cy = innerHeight/2;
+    let cx = innerWidth/1.55, cy = innerHeight/2.3;
     let ctx = canvas.getContext("2d");
     let selected = (Math.floor((- 0.2 - angle) * sections.length / (2*Math.PI))
         % sections.length);
@@ -112,6 +118,10 @@ function change(text, color){
     document.getElementById("simple").style.color=color;
 }
 
+function change2(text){
+    document.getElementById("balance").innerHTML=text;
+}
+
 function getRandomFloat(min, max) {
     return Math.random() * (max - min) + min;
 }
@@ -128,6 +138,9 @@ function spinTo(winner, duration) {
         repaint(angle);
         if (t < 1) requestAnimationFrame(frame); else{
             change(sections[winner], colors[winner]);
+            if (massiv[winner] == 0) balance = balance - 100;
+            else balance = balance + 100 * massiv[winner];
+            change2('Balance: ' + balance);
             if (sections[winner] != '0.00×') {
                 audio1.play();}
             running = false;
