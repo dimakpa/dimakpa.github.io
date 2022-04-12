@@ -8,14 +8,17 @@ var world;
 var particles = [];
 var plinkos = [];
 var bounds = [];
-var cols = 11;
-var rows = 10;
+var cols = 13;
+var rows = 9;
 var buttoon
 
-let Flag = 0;
 
+let Flag = 0;
+let X = Math.min(innerWidth, innerHeight) * 0.7;
+var rParticle = X*0.0172;
+var rPlinko = X*0.02;
 function setup() {
-    createCanvas(600, 700);
+    createCanvas(X,X);
     colorMode(HSB);
     engine = Engine.create();
     world = engine.world;
@@ -40,7 +43,7 @@ function setup() {
     Events.on(engine, 'collisionStart', collision);
 
     newParticle();
-    var spacingX = width / (cols+4);
+    var spacingX = width / (cols);
     var spacingY = width / cols;
     for (var j = 0; j < rows; j++) {
         for (var i = 0; i < cols + 1; i++) {
@@ -48,28 +51,27 @@ function setup() {
             if (j % 2 == 0) {
                 x += spacingX / 2;
             }
-            var y = spacingY + j * spacingY;
-            var p = new Plinko(x, y, 12);
+            var y = spacingY + j * spacingY +30;
+            var p = new Plinko(x, y, rPlinko);
             plinkos.push(p);
         }
     }
 
-    var b = new Boundary(width /2, height + 50, width, 100);
+    var b = new Boundary(width /2, height + X*0.03, width, X*0.07);
     bounds.push(b);
-    for (var i = 0; i < cols+1; i++) {
+    for (var i = 0; i < cols+2; i++) {
         var x = i * spacingX;
-        var h = 100;
-        var w = 10;
+        var h = X*0.1915;
+        var w = h/30;
         var y = height - h / 2;
         var b = new Boundary(x, y, w, h);
         bounds.push(b);
     }
-    var b = new Boundary(spacingX*i, y, w, 1300);
+    var b = new Boundary(spacingX*(i-2), y, w, X*2);
     bounds.push(b);
-    var b = new Boundary(0, y, w, 1300);
+    var b = new Boundary(0, y, w, X*2);
     bounds.push(b);
-    buttoon = new Button(spacingX*i+63, y, 100, 50);
-    bounds.push(buttoon);
+
 }
 
 function RandomParticle(min, max){
@@ -77,27 +79,26 @@ function RandomParticle(min, max){
 }
 
 function newParticle() {
-    var x = RandomParticle(250, 350);
-    var p = new Particle(x, 0, 7);
+    var x = RandomParticle(X/2 - X*0.05, X/2 + X*0.05);
+    var p = new Particle(x, X*0.03, rParticle);
     particles.push(p);
 }
 
 function mousePressed(){
-    Flag = 0;
-    if(buttoon.contains(mouseX, mouseY)){
-        buttoon.revealT();
-        Flag = 1;
-
-    }
+    Flag = 1;
 }
 
+document.addEventListener('keydown', function(event) {
+    if (event.code == 'Space') {
+        Flag = 1;
+    }
+});
+
 function draw() {
-    background(51)
     particles[0].show();
-    background(0, 0, 0);
+    background("#FFE4B5");
     if (Flag === 1) {
         newParticle();
-        buttoon.revealF();
         Flag =0;
     }
     Engine.update(engine, 1000 / 30);
