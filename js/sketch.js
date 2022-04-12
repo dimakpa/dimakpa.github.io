@@ -116,4 +116,5 @@ function draw() {
     for (var i = 0; i < bounds.length; i++) {
         bounds[i].show();
     }
+
 }
