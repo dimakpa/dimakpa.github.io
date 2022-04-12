@@ -109,11 +109,11 @@ function setup() {
     bounds.push(b);
     var b = new Box(X/13/2*9, height-h/4, X*0.9/cols, h/3, "#31415e", 2);
     bounds.push(b);
-    var b = new Box(X/13/2*11, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.2);
+    var b = new Box(X/13/2*11, height-h/4, X*0.9/cols, h/3, "#2d313a", 5);
     bounds.push(b);
     var b = new Box(X/13/2*13, height-h/4, X*0.9/cols, h/3, "#1b1f2a", 7);
     bounds.push(b);
-    var b = new Box(X/13/2*15, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.2);
+    var b = new Box(X/13/2*15, height-h/4, X*0.9/cols, h/3, "#2d313a", 5);
     bounds.push(b);
     var b = new Box(X/13/2*17, height-h/4, X*0.9/cols, h/3, "#31415e", 2);
     bounds.push(b);
