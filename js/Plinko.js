@@ -1,12 +1,3 @@
-// Daniel Shiffman
-// http://codingtra.in
-// http://patreon.com/codingtrain
-// Plinko
-// Video 1: https://youtu.be/KakpnfDv_f0
-// Video 2: https://youtu.be/6s4MJcUyaUE
-// Video 3: https://youtu.be/jN-sW-SxNzk
-// Video 4: https://youtu.be/CdBXmsrkaPs
-
 function Plinko(x, y, r) {
     var options = {
         restitution: 1,
@@ -21,7 +12,7 @@ function Plinko(x, y, r) {
 
 Plinko.prototype.show = function() {
     noStroke();
-    fill(127);
+    fill("#28525c");
     var pos = this.body.position;
     push();
     translate(pos.x, pos.y);
