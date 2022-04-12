@@ -11,10 +11,23 @@ var bounds = [];
 var cols = 13;
 var rows = 9;
 var buttoon
+var click =1;
+var balance = 5000;
+var G=1;
 
+var ding;
+// function preload(){
+//     ding = loadSound('audio1.mp3');
+// }
 
+let X;
 let Flag = 0;
-let X = Math.min(innerWidth, innerHeight) * 0.9;
+if(innerWidth >= innerHeight) {
+    X = Math.min(innerWidth, innerHeight) * 0.9;
+}else{
+    X = Math.min(innerWidth, innerHeight);
+}
+
 var rParticle = X*0.0172;
 var rPlinko = X*0.02;
 function setup() {
@@ -24,18 +37,31 @@ function setup() {
     world = engine.world;
     world.gravity.y = 1;
 
+    //рассмотрение столкновения с полом
     function collision(event) {
+        //console.log(event);
         var pairs = event.pairs;
         for (var i = 0; i < pairs.length; i++) {
             var labelA = pairs[i].bodyA.label;
             var labelB = pairs[i].bodyB.label;
-            //var labelC = pairs[i].bodyC.label;
-            console.log(labelA, labelB)
-            if (labelA == 'boundary' && labelB == 'plinko') {
-                //ding.play();
+            let prise_box;
+            console.log(labelA, labelB);
+            if (labelA === 'box' && labelB === 'particle') {
+                prise_box = Number(pairs[i].bodyA.price);
+                balance = balance + (100*prise_box);
+                document.getElementById("balance").innerHTML = balance.toString();
+                G=0;
+                //World.remove(particles.pop());
+                //particles.shift();
+                //pairs[i].destroy();
             }
-            if (labelA == 'plinko' && labelB == 'boundary') {
-                //ding.play();
+            else if (labelA === 'particle' && labelB === 'box') {
+                prise_box = Number(pairs[i].bodyB.price);
+                balance = balance + (100*prise_box);
+                document.getElementById("balance").innerHTML = balance.toString();
+                G=0;
+                //World.remove(pairs[i].bodyA);
+                //particles.shift();
             }
         }
     }
@@ -48,7 +74,7 @@ function setup() {
     for (var j = 0; j < rows; j++) {
         for (var i = 0; i < cols + 1; i++) {
             var x = i * spacingX;
-            if (j % 2 == 0) {
+            if (j % 2 === 0) {
                 x += spacingX / 2;
             }
             var y = spacingY + j * spacingY +30;
@@ -72,6 +98,33 @@ function setup() {
     var b = new Boundary(0, y, w, X*2);
     bounds.push(b);
 
+    //боксы для подсчета
+    var b = new Box(X/13/2, height-h/4, X*0.9/cols, h/3, "#1CF80D", 10);
+    bounds.push(b);
+    var b = new Box(X/13/2*3, height-h/4, X*0.9/cols, h/3, "#6dde00", 5);
+    bounds.push(b);
+    var b = new Box(X/13/2*5, height-h/4, X*0.9/cols, h/3, "#2fa101", 1.5);
+    bounds.push(b);
+    var b = new Box(X/13/2*7, height-h/4, X*0.9/cols, h/3, "#466c79", 0.8);
+    bounds.push(b);
+    var b = new Box(X/13/2*9, height-h/4, X*0.9/cols, h/3, "#31415e", 0.5);
+    bounds.push(b);
+    var b = new Box(X/13/2*11, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.2);
+    bounds.push(b);
+    var b = new Box(X/13/2*13, height-h/4, X*0.9/cols, h/3, "#1b1f2a", 0.1);
+    bounds.push(b);
+    var b = new Box(X/13/2*15, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.2);
+    bounds.push(b);
+    var b = new Box(X/13/2*17, height-h/4, X*0.9/cols, h/3, "#31415e", 0.5);
+    bounds.push(b);
+    var b = new Box(X/13/2*19, height-h/4, X*0.9/cols, h/3, "#466c79", 0.8);
+    bounds.push(b);
+    var b = new Box(X/13/2*21, height-h/4, X*0.9/cols, h/3, "#2fa101", 1.5);
+    bounds.push(b);
+    var b = new Box(X/13/2*23, height-h/4, X*0.9/cols, h/3, "#6dde00", 5);
+    bounds.push(b);
+    var b = new Box(X/13/2*25, height-h/4, X*0.9/cols, h/3, "#1CF80D", 10);
+    bounds.push(b);
 }
 
 function RandomParticle(min, max){
@@ -84,18 +137,42 @@ function newParticle() {
     particles.push(p);
 }
 
+function changebalance(){
+    document.getElementById("click").innerHTML = click.toString();
+    document.getElementById("balance").innerHTML = balance.toString();
+
+}
+
 function mousePressed(){
-    Flag = 1;
+    //ding.play();
+    click++;
+    balance = balance - 100;
+    if(balance===0){
+        Flag = 1;
+    }else {
+        Flag = 1;
+        changebalance();
+    }
+
 }
 
 document.addEventListener('keydown', function(event) {
-    if (event.code == 'Space') {
-        Flag = 1;
+    if (event.code === 'Space') {
+        click++;
+        balance = balance - 100;
+        if(balance===0){
+            Flag = 1;
+        }else {
+            changebalance();
+            Flag = 1;
+        }
     }
 });
 
 function draw() {
-    particles[0].show();
+    if(particles[0]){
+        particles[0].show();
+    }
     background("#FFE4B5");
     if (Flag === 1) {
         newParticle();
@@ -104,10 +181,11 @@ function draw() {
     Engine.update(engine, 1000 / 30);
     for (var i = 0; i < particles.length; i++) {
         particles[i].show();
-        if (particles[i].isOffScreen()) {
+        if (particles[i].isOffScreen() || G === 0) {
             World.remove(world, particles[i].body);
             particles.splice(i, 1);
             i--;
+            G=1;
         }
     }
     for (var i = 0; i < plinkos.length; i++) {
