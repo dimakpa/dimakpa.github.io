@@ -1,5 +1,5 @@
 function Particle(x, y, r) {
-    // this.hue = random(360);
+    this.hue = random(360);
     var options = {
         restitution: 0.5,
         friction: 0,
