@@ -1,0 +1,10 @@
+h2 {
+    color: #14222FFF;
+    font: 2vmin Arial;
+    font-weight: bold;
+    font-size: 4vmin;
+    position: absolute;
+    top	: 45vh;
+    text-align: center;
+    width	: 100%;
+}
