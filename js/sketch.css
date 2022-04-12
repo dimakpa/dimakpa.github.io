@@ -9,11 +9,11 @@ h2{
 h3{
     color: black;
     font: 2vmin Arial;
-    text-align: left;
+    text-align: center;
 }
 
 .button {
-    background-color: #28525c; /* Green */
+    background-color: #28525c;
     border: #9c9c9c;
     color: white;
     padding: 15px 32px;
@@ -22,7 +22,7 @@ h3{
     display: inline-block;
     font-size: 16px;
     height: 9vh;
-    width: 10vw;
+    width: 24vw;
     cursor: pointer;
     position: absolute;
     left: 0;
@@ -45,10 +45,10 @@ h3{
     display: inline-block;
     font-size: 16px;
     height: 9vh;
-    width: 10vw;
+    width: 24vw;
     cursor: pointer;
     position: absolute;
-    left: 11vw;
+    left: 26vw;
     bottom: 0;
 }
 .button2:hover {background-color: #28525c}
@@ -68,10 +68,10 @@ h3{
     display: inline-block;
     font-size: 16px;
     height: 9vh;
-    width: 10vw;
+    width: 24vw;
     cursor: pointer;
     position: absolute;
-    left: 22vw;
+    left: 52vw;
     bottom: 0;
 }
 .button3:hover {background-color: #28525c}
@@ -91,10 +91,10 @@ h3{
     display: inline-block;
     font-size: 16px;
     height: 9vh;
-    width: 10vw;
+    width: 24vw;
     cursor: pointer;
     position: absolute;
-    left: 33vw;
+    left: 78vw;
     bottom: 0;
 }
 .button4:hover {background-color: #28525c}
