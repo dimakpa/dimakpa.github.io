@@ -5,7 +5,7 @@ function Plinko(x, y, r) {
         isStatic: true
     };
     this.body = Bodies.circle(x, y, r, options);
-    this.body.label = 'plinko';
+    this.body.label = 'particle';
     this.r = r;
     World.add(world, this.body);
 }
