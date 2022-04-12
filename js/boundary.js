@@ -1,13 +1,3 @@
-
-// Daniel Shiffman
-// http://codingtra.in
-// http://patreon.com/codingtrain
-// Plinko
-// Video 1: https://youtu.be/KakpnfDv_f0
-// Video 2: https://youtu.be/6s4MJcUyaUE
-// Video 3: https://youtu.be/jN-sW-SxNzk
-// Video 4: https://youtu.be/CdBXmsrkaPs
-
 function Boundary(x, y, w, h) {
     var options = {
         isStatic: true
@@ -20,8 +10,8 @@ function Boundary(x, y, w, h) {
 }
 
 Boundary.prototype.show = function() {
-    fill(255);
-    stroke(255);
+    fill(160, 11, 35);
+    stroke(0, 10, 75);
     var pos = this.body.position;
     push();
     translate(pos.x, pos.y);
