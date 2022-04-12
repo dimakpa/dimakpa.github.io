@@ -8,3 +8,68 @@ h2 {
     text-align: center;
     width	: 100%;
 }
+* {
+    box-sizing: border-box;
+}
+
+
+form {
+    position: fixed;
+    top	: 45vh;
+    padding: 1em;
+    background: #213743;
+    border: 10px solid #14222f;
+    max-width: 20vw;
+    margin-left: 5vw;
+    /*padding: 1em;*/
+}
+form input {
+    margin-bottom: 1rem;
+    background: #fff;
+    border: 1px solid #9c9c9c;
+}
+form button {
+    background: #00e602;
+    padding: 0.7em;
+    border: 0;
+}
+form button:hover {
+    background: #44ff46;
+}
+
+label {
+    color: white;
+    text-align: right;
+    display: block;
+    padding: 0.5em 1.5em 0.5em 0;
+}
+
+input {
+    width: 100%;
+    padding: 0.7em;
+    margin-bottom: 0.5rem;
+}
+input:focus {
+    outline: 3px solid gold;
+}
+
+@media (min-width: 400px) {
+    form {
+        overflow: hidden;
+    }
+
+    label {
+        float: left;
+        width: 200px;
+    }
+
+    input {
+        float: left;
+        width: calc(100% - 200px);
+    }
+
+    button {
+        float: right;
+        width: calc(100% - 200px);
+    }
+}

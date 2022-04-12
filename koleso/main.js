@@ -18,14 +18,12 @@ let frame = null;
 let text = null;
 
 function repaint(angle) {
-    let r = Math.min(innerWidth, innerHeight) * 0.35;
+    let r = Math.min(innerWidth, innerHeight) * 0.3;
     if (wheels === null) {
         wheels = [];
         for (let selected=0; selected<sections.length; selected++) {
             let c = document.createElement("canvas");
-            //let b = document.getElementById("simple");
             c.width = c.height = 2*r + 10;
-            //b.style = "#ff0000";
                 let ctx = c.getContext("2d"), cx = 5 + r, cy = 5 + r;
             for (let i=0; i<sections.length; i++) {
                 let a0 = 2*Math.PI*i/sections.length;
@@ -80,15 +78,14 @@ function repaint(angle) {
         ctx3.fill();
 
 
-                    ctx.translate(cx, cy);
-                    ctx.rotate(Math.PI - 0.2);
-                    ctx.beginPath();
-                    ctx.moveTo(- r*1.1, - r*0.05);
-                    ctx.lineTo(- r*0.9, 0);
-                    ctx.lineTo(- r*1.1, r*0.05);
-                    ctx.fillStyle = "#fa0000";
-                    ctx.fill();
-
+        ctx.translate(cx, cy);
+        ctx.rotate(Math.PI - 0.2);
+        ctx.beginPath();
+        ctx.moveTo(- r*1.15, - r*0.06);
+        ctx.lineTo(- r*0.9, 0);
+        ctx.lineTo(- r*1.15, r*0.06);
+        ctx.fillStyle = "#f85771";
+        ctx.fill();
 
     }
 
@@ -109,7 +106,7 @@ function repaint(angle) {
 }
 
 let audio1 = new Audio('audio1.mp3');
-
+let audio2 = new Audio('audio2.mp3');
 function change(text, color){
     document.getElementById("simple").innerHTML=text;
     document.getElementById("simple").style.color=color;
@@ -143,7 +140,8 @@ function spinTo(winner, duration) {
 let x = null
 canvas.onmousedown = function() {
     if (!running) {
-        change("null", "#14222f")
+        audio2.play();
+        change("", "#14222f")
         x = Math.random()*sections.length|0;
         spinTo(x, 1500);
     }
@@ -153,6 +151,7 @@ canvas.onmousedown = function() {
 document.addEventListener('keydown', function(event) {
     if (event.code == 'Space') {
         if (!running) {
+            audio2.play();
             change("null", "#14222f")
             x = Math.random()*sections.length|0;
             spinTo(x, 1500);
