@@ -2,20 +2,30 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css" type="text/css" />
+<!--    <link rel="stylesheet" href="main.css" type="text/css" />-->
+    <link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css">
+    <link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css">
 </head>
 <body>
-
+<div id="rectangle0">0.00×</div>
+<div id="rectangle15">1.50×</div>
+<div id="rectangle17">1.70×</div>
+<div id="rectangle20">2.00×</div>
+<div id="rectangle30">30.00×</div>
+<div id="rectangle4">4.00×</div>
+<div id="rectangle">
+    <div id="rectangle2">
+        <h3 id = "balance">Balance: 5000 $</h3>
+    </div>
+</div>
 <form class="form1" action="">
     <label for="firstName" class="first-name">Bet amount</label>
     <input id="firstName" type="text">
     <button>BET</button>
 </form>
 <h2 id = "simple"></h2>
-<h3 id = "balance">Balance: 5000 </h3>
-<h4 id = "bet">Amount of bet: 100 </h4>
+<!--<h4 id = "bet">100 </h4>-->
 <canvas id="canvas" ></canvas>
 <script src = "main.js"> </script>
-
 </body>
 </html>
