@@ -17,57 +17,86 @@ body{
     top: 73vh;
     left: 9vw;
     width: 12vw;
-    height: 7vw;
+    height: 8vw;
+    font: 2vh Trebuchet MS, sans-serif;
+    color: white;
+    font-size: 4vw;
+    line-height: 8vw;
     background: #406c80;
     border-radius: 2vmin;
 }
 
 #rectangle15{
+    text-align: center;
     position: absolute;
     top: 73vh;
     left: 23vw;
     width: 12vw;
-    height: 7vw;
+    height: 8vw;
+    font: 2vh Trebuchet MS, sans-serif;
+    color: white;
+    font-size: 4vw;
+    line-height: 8vw;
     background: #00e304;
     border-radius: 2vmin;
 }
 
 #rectangle17{
+    text-align: center;
     position: absolute;
     top: 73vh;
     left: 37vw;
     width: 12vw;
-    height: 7vw;
+    height: 8vw;
+    font: 2vh Trebuchet MS, sans-serif;
+    color: white;
+    font-size: 4vw;
+    line-height: 8vw;
     background: #d4e7f1;
     border-radius: 2vmin;
 }
 
 #rectangle20{
+    text-align: center;
     position: absolute;
     top: 73vh;
     left: 51vw;
     width: 12vw;
-    height: 7vw;
+    height: 8vw;
+    font: 2vh Trebuchet MS, sans-serif;
+    color: white;
+    font-size: 4vw;
+    line-height: 8vw;
     background: #fce805;
     border-radius: 2vmin;
 }
 
 #rectangle30{
+    text-align: center;
     position: absolute;
     top: 73vh;
     left: 79vw;
-    width: 12vw;
-    height: 7vw;
+    width: 13vw;
+    height: 8vw;
+    font: 2vh Trebuchet MS, sans-serif;
+    color: white;
+    font-size: 4vw;
+    line-height: 8vw;
     background: #7e46fc;
     border-radius: 2vmin;
 }
 
 #rectangle4{
+    text-align: center;
     position: absolute;
     top: 73vh;
     left: 65vw;
     width: 12vw;
-    height: 7vw;
+    height: 8vw;
+    font: 2vh Trebuchet MS, sans-serif;
+    color: white;
+    font-size: 4vw;
+    line-height: 8vw;
     background: #fba22f;
     border-radius: 2vmin;
 }
