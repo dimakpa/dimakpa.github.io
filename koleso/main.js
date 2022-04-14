@@ -1,16 +1,20 @@
-
 let canvas = document.getElementById("canvas");
 
+
+
+
+let demo = 0;
+
 let sections = ["0.00×", "30.00×", "0.00×", "3.00×", "0.00×",
-    "1.70×", "0.00×", "1.30×", "0.00×", "1.10×",
-    "0.00×", "1.10×", "0.00×", "1.10×", "0.00×", "1.70×", "0.00×",
-    "1.30×", "0.00×", "1.10×", "0.00×", "1.30×",
-    "0.00×", "3.00×","0.00×", "1.30×", "0.00×", "1.30×", "0.00×",
-    "1.10×" ];
+    "1.70×", "0.00×", "2.00×", "0.00×", "1.50×",
+    "0.00×", "1.50×", "0.00×", "1.50×", "0.00×", "1.70×", "0.00×",
+    "2.00×", "0.00×", "1.50×", "0.00×", "2.00×",
+    "0.00×", "3.00×","0.00×", "2.00×", "0.00×", "2.00×", "0.00×",
+    "1.50×" ];
 
 
-let massiv = [0, 30, 0, 3, 0, 1.7, 0, 1.3, 0 ,1.1, 0, 1.1, 0, 1.1, 0, 1.7, 0,
-              1.3, 0, 1.1, 0, 1.3, 0, 3, 0, 1.3 ,0, 1.3, 0, 1.1]
+let massiv = [0, 30, 0, 3, 0, 1.7, 0, 2, 0 ,1.5, 0, 1.5, 0, 1.5, 0, 1.7, 0,
+              2, 0, 1.5, 0, 2, 0, 3, 0, 2 ,0, 2, 0, 1.5]
 
 let colors = ["#406c81", "#7e46fc", "#406c81", "#fba22f","#406c81","#d4e7f1","#406c81","#fce805",
     "#406c81","#00e304","#406c81","#00e304","#406c81","#00e304","#406c81","#d4e7f1",
@@ -22,9 +26,14 @@ let balance = 5000;
 let wheels = null;
 let frame = null;
 let text = null;
+let r = null;
+let cx = null;
+let cy = null;
 
 function repaint(angle) {
-    let r = Math.min(innerWidth, innerHeight) * 0.30;
+    if (innerWidth > innerHeight){r = Math.min(innerWidth, innerHeight) * 0.4; }
+    else {r = Math.min(innerWidth, innerHeight) * 0.3;}
+    //let r = Math.min(innerWidth, innerHeight) * 0.33;
     if (wheels === null) {
         wheels = [];
         for (let selected=0; selected<sections.length; selected++) {
@@ -97,7 +106,9 @@ function repaint(angle) {
 
     canvas.width = innerWidth;
     canvas.height = innerHeight;
-    let cx = innerWidth/1.55, cy = innerHeight/2.3;
+    if (innerWidth > innerHeight){cx = innerWidth/1.4, cy = innerHeight/2; }
+    else {cx = innerWidth/2, cy = innerHeight/3.1;}
+    //let cx = innerWidth/1.65, cy = innerHeight/2.4;
     let ctx = canvas.getContext("2d");
     let selected = (Math.floor((- 0.2 - angle) * sections.length / (2*Math.PI))
         % sections.length);
@@ -122,9 +133,17 @@ function change2(text){
     document.getElementById("balance").innerHTML=text;
 }
 
+function change3(text){
+    document.getElementById("bet").innerHTML=text;
+}
+
 function getRandomFloat(min, max) {
     return Math.random() * (max - min) + min;
 }
+
+
+
+
 let angle = 0, running = false;
 function spinTo(winner, duration) {
     let final_angle = (-0.2) - (getRandomFloat(0.001, 0.999) + winner)*2*Math.PI/(sections.length);
@@ -140,7 +159,7 @@ function spinTo(winner, duration) {
             change(sections[winner], colors[winner]);
             if (massiv[winner] == 0) balance = balance - 100;
             else balance = balance + 100 * massiv[winner];
-            change2('Balance: ' + balance);
+            change2('Balance: ' + balance +' $');
             if (sections[winner] != '0.00×') {
                 audio1.play();}
             running = false;
@@ -150,13 +169,43 @@ function spinTo(winner, duration) {
     //change(sections[winner]);
     running = true;
 }
+
+
+function random(){
+    let y = Math.random();
+    if (y < 0.5)
+        y = 0;
+    else
+        y= 1;
+    return y;
+
+}
+
 let x = null
 canvas.onmousedown = function() {
     if (!running) {
         audio2.play();
         change("", "#14222f")
-        x = Math.random()*sections.length|0;
-        spinTo(x, 1500);
+        if (demo == 1) { x = Math.random()*sections.length|0;}
+        else {
+            x = Math.random()*sections.length|0;
+            if (massiv[x] == 0) {
+                spinTo(x, 1500);
+            }
+            else {
+                    if (massiv[x] == 30) {
+                        x = Math.random()*sections.length|0;
+                        spinTo(x, 1500);
+                    }
+                    else {
+                        x = Math.random()*sections.length|0;
+                        if (massiv[x] == 30) {
+                            x = Math.random()*sections.length|0;
+                            spinTo(x, 1500);
+                        }
+                        else spinTo(x, 1500);}
+            }
+        }
     }
 };
 
@@ -165,9 +214,27 @@ document.addEventListener('keydown', function(event) {
     if (event.code == 'Space') {
         if (!running) {
             audio2.play();
-            change("null", "#14222f")
-            x = Math.random()*sections.length|0;
-            spinTo(x, 1500);
+            change("", "#14222f")
+            if (demo == 1) { x = Math.random()*sections.length|0;}
+            else {
+                x = Math.random()*sections.length|0;
+                if (massiv[x] == 0) {
+                    spinTo(x, 1500);
+                }
+                else {
+                    if (massiv[x] == 30) {
+                        x = Math.random()*sections.length|0;
+                        spinTo(x, 1500);
+                    }
+                    else {
+                        x = Math.random()*sections.length|0;
+                        if (massiv[x] == 30) {
+                            x = Math.random()*sections.length|0;
+                            spinTo(x, 1500);
+                        }
+                        else spinTo(x, 1500);}
+                }
+            }
         }
     }
 });
