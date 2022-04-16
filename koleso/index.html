@@ -5,8 +5,56 @@
 <!--    <link rel="stylesheet" href="main.css" type="text/css" />-->
     <link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css">
     <link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Убавляем кол-во по клику
+            $('.quantity_inner .bt_minus').click(function() {
+                let $input = $(this).parent().find('.quantity');
+                let count = parseInt($input.val()) - 100;
+                count = count < 100 ? 100 : count;
+                $input.val(count);
+            });
+// Прибавляем кол-во по клику
+            $('.quantity_inner .bt_plus').click(function() {
+                let $input = $(this).parent().find('.quantity');
+                let count = parseInt($input.val()) + 100;
+                count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
+                $input.val(parseInt(count));
+            });
+// Убираем все лишнее и невозможное при изменении поля
+            $('.quantity_inner .quantity').bind("change keyup input click", function() {
+                if (this.value.match(/[^0-9]/g)) {
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                }
+                if (this.value == "") {
+                    this.value = 100;
+                }
+                if (this.value <100) {
+                    this.value = this.value * 10;
+                }
+                if (this.value > parseInt($(this).data('max-count'))) {
+                    this.value = parseInt($(this).data('max-count'));
+                }
+            });
+        });
+    </script>
 </head>
 <body>
+<div id="rectanglebig">
+    <h9 id = "bet_amount" size="2">Bet amount</h9>
+    <button id = "start" onClick=start()>BET</button>
+    <div class="quantity_inner">
+        <button class="bt_minus">
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <input type="text" value="100" size="2" class="quantity" data-max-count="1000" data-min-count="1000" id = "input1"/>
+        <h10 id = "dollar" size="2">$</h10>
+        <button class="bt_plus">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+    </div>
+</div>
 <div id="rectangle0">0.00×</div>
 <div id="rectangle15">1.50×</div>
 <div id="rectangle17">1.70×</div>
@@ -18,11 +66,7 @@
         <h3 id = "balance">Balance: 5000 $</h3>
     </div>
 </div>
-<form class="form1" action="">
-    <label for="firstName" class="first-name">Bet amount</label>
-    <input id="firstName" type="text">
-    <button>BET</button>
-</form>
+
 <h2 id = "simple"></h2>
 <!--<h4 id = "bet">100 </h4>-->
 <canvas id="canvas" ></canvas>
