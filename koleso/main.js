@@ -50,11 +50,6 @@ function repaint(angle) {
                 ctx.fillStyle = colors[i % 30];
                 ctx.fill();
                 ctx.save();
-                if (i == selected) {
-                    ctx.fillStyle = "#000000";
-                } else {
-                    ctx.fillStyle = "#ff0000";
-                }
                 ctx.font = "bold " + r/(sections.length*0,35)*4 + "px serif";
                 ctx.textAlign = "center";
                 ctx.textBaseline = "middle";
@@ -73,12 +68,17 @@ function repaint(angle) {
         frame = document.createElement("canvas");
         frame.width = frame.height = 10 + 2*r*1.25 | 0;
         let ctx = frame.getContext("2d"), cx = frame.width/2, cy = frame.height/2;
+        ctx.shadowOffsetX = r/80;
+        ctx.shadowOffsetY = r/80;
+        ctx.shadowBlur = r/40;
+        ctx.shadowColor = "rgba(0,0,0,0.5)";
         ctx.beginPath();
         ctx.arc(cx, cy, r*1.07, 0, 2*Math.PI, true);
         ctx.arc(cx, cy, r*0.975, 0, 2*Math.PI, false);
         ctx.fillStyle = "#263742";
         ctx.fill();
-
+        ctx.shadowOffsetX = r/40;
+        ctx.shadowOffsetY = r/40;
         let ctx2 = frame.getContext("2d"), cx2 = frame.width/2, cy2 = frame.height/2;
         ctx2.beginPath();
         ctx2.fillStyle = "#14222f";
@@ -157,8 +157,8 @@ function spinTo(winner, duration) {
         repaint(angle);
         if (t < 1) requestAnimationFrame(frame); else{
             change(sections[winner], colors[winner]);
-            if (massiv[winner] == 0) balance = balance - 100;
-            else balance = balance + 100 * massiv[winner];
+            if (massiv[winner] == 0) balance = balance - document.getElementById('input1').value;
+            else balance = balance + document.getElementById('input1').value * massiv[winner];
             change2('Balance: ' + balance +' $');
             if (sections[winner] != '0.00×') {
                 audio1.play();}
@@ -182,63 +182,92 @@ function random(){
 }
 
 let x = null
-canvas.onmousedown = function() {
-    if (!running) {
-        audio2.play();
-        change("", "#14222f")
-        if (demo == 1) { x = Math.random()*sections.length|0;}
-        else {
-            x = Math.random()*sections.length|0;
-            if (massiv[x] == 0) {
-                spinTo(x, 1500);
-            }
-            else {
-                    if (massiv[x] == 30) {
-                        x = Math.random()*sections.length|0;
-                        spinTo(x, 1500);
-                    }
-                    else {
-                        x = Math.random()*sections.length|0;
-                        if (massiv[x] == 30) {
-                            x = Math.random()*sections.length|0;
-                            spinTo(x, 1500);
-                        }
-                        else spinTo(x, 1500);}
-            }
-        }
-    }
-};
+// canvas.onmousedown = function() {
+//     if (!running) {
+//         audio2.play();
+//         change("", "#14222f")
+//         if (demo == 1) { x = Math.random()*sections.length|0;}
+//         else {
+//             x = Math.random()*sections.length|0;
+//             if (massiv[x] == 0) {
+//                 spinTo(x, 1500);
+//             }
+//             else {
+//                     if (massiv[x] == 30) {
+//                         x = Math.random()*sections.length|0;
+//                         spinTo(x, 1500);
+//                     }
+//                     else {
+//                         x = Math.random()*sections.length|0;
+//                         if (massiv[x] == 30) {
+//                             x = Math.random()*sections.length|0;
+//                             spinTo(x, 1500);
+//                         }
+//                         else spinTo(x, 1500);}
+//             }
+//         }
+//     }
+// };
+//
+//
+// document.addEventListener('keydown', function(event) {
+//     if (event.code == 'Space') {
+//         if (!running) {
+//             audio2.play();
+//             change("", "#14222f")
+//             if (demo == 1) { x = Math.random()*sections.length|0;}
+//             else {
+//                 x = Math.random()*sections.length|0;
+//                 if (massiv[x] == 0) {
+//                     spinTo(x, 1500);
+//                 }
+//                 else {
+//                     if (massiv[x] == 30) {
+//                         x = Math.random()*sections.length|0;
+//                         spinTo(x, 1500);
+//                     }
+//                     else {
+//                         x = Math.random()*sections.length|0;
+//                         if (massiv[x] == 30) {
+//                             x = Math.random()*sections.length|0;
+//                             spinTo(x, 1500);
+//                         }
+//                         else spinTo(x, 1500);}
+//                 }
+//             }
+//         }
+//     }
+// });
+//repaint(angle);
 
-
-document.addEventListener('keydown', function(event) {
-    if (event.code == 'Space') {
+function start() {
+    if (balance >=document.getElementById('input1').value) {
         if (!running) {
             audio2.play();
             change("", "#14222f")
-            if (demo == 1) { x = Math.random()*sections.length|0;}
-            else {
-                x = Math.random()*sections.length|0;
+            if (demo == 1) {
+                x = Math.random() * sections.length | 0;
+            } else {
+                x = Math.random() * sections.length | 0;
                 if (massiv[x] == 0) {
                     spinTo(x, 1500);
-                }
-                else {
+                } else {
                     if (massiv[x] == 30) {
-                        x = Math.random()*sections.length|0;
+                        x = Math.random() * sections.length | 0;
                         spinTo(x, 1500);
-                    }
-                    else {
-                        x = Math.random()*sections.length|0;
+                    } else {
+                        x = Math.random() * sections.length | 0;
                         if (massiv[x] == 30) {
-                            x = Math.random()*sections.length|0;
+                            x = Math.random() * sections.length | 0;
                             spinTo(x, 1500);
-                        }
-                        else spinTo(x, 1500);}
+                        } else spinTo(x, 1500);
+                    }
                 }
             }
         }
     }
-});
-//repaint(angle);
+
+}
 
 let csz = null;
 setInterval(function() {
@@ -249,3 +278,5 @@ setInterval(function() {
         repaint(angle);
     }
 }, 10);
+
+
