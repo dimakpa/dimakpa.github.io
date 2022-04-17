@@ -26,10 +26,10 @@ body{
 
 }
 
-#start:hover {
-    color: #ffffff;
-    background: rgb(0, 255, 3);
-}
+/*#start:hover {*/
+/*    color: #ffffff;*/
+/*    background: rgb(0, 255, 3);*/
+/*}*/
 
 
 #bet_amount{
@@ -245,7 +245,7 @@ h4{
 .quantity_inner .quantity {
     color: #BFE2FF;
     height: 5vh;
-    width: 5vh;
+    width: 7vw;
     padding: 0;
     margin: 1vh 0.3vw;
     border-radius: 10px;
