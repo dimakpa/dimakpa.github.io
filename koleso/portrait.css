@@ -9,8 +9,8 @@ body{
 
 #start{
     position: absolute;
-    top: 83.5vh;
-    left: 56vw;
+    top: 1.2vh;
+    left: 48vw;
     width: 34vw;
     height: 12vh;
     border-radius: 2vmin;
@@ -249,7 +249,7 @@ h4{
     padding: 0;
     margin: 1vh 0.3vw;
     border-radius: 10px;
-    border: 4px solid #2f4553;
+    border: 0.5vw solid #2f4553;
     background: #0f212e;
     cursor: pointer;
     outline: 0;
