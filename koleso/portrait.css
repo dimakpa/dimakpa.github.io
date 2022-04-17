@@ -9,10 +9,10 @@ body{
 
 #start{
     position: absolute;
-    top: 84vh;
+    top: 83.5vh;
     left: 56vw;
     width: 34vw;
-    height: 14vh;
+    height: 12vh;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.58);
     background: #00e602;
@@ -94,7 +94,7 @@ body{
     top: 82vh;
     left: 9vw;
     width: 83vw;
-    height: 17vh;
+    height: 15vh;
     background: #213743;
     border-radius: 1vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
