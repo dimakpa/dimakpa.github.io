@@ -243,7 +243,7 @@ h4{
 .quantity_inner .bt_minus,
 .quantity_inner .bt_plus,
 .quantity_inner .quantity {
-    color: #BFE2FF;
+    color: #ffffff;
     height: 5vh;
     width: 7vw;
     padding: 0;
@@ -264,7 +264,7 @@ h4{
 }
 .quantity_inner .bt_minus svg,
 .quantity_inner .bt_plus svg {
-    stroke: #BFE2FF;
+    stroke: #ffffff;
     stroke-width: 4;
     transition: 0.5s;
     margin: 0.5vh;
