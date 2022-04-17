@@ -261,6 +261,7 @@ h4{
     font-size: 3vh;
     color: #FFF;
     font-family:Menlo,Monaco,Consolas,"Courier New",monospace;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
 }
 .quantity_inner .bt_minus svg,
 .quantity_inner .bt_plus svg {
