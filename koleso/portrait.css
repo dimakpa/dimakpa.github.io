@@ -244,10 +244,10 @@ h4{
 .quantity_inner .bt_plus,
 .quantity_inner .quantity {
     color: #BFE2FF;
-    height: 40px;
-    width: 40px;
+    height: 5vh;
+    width: 5vh;
     padding: 0;
-    margin: 10px 2px;
+    margin: 1vh 0.3vw;
     border-radius: 10px;
     border: 4px solid #2f4553;
     background: #0f212e;
@@ -267,7 +267,7 @@ h4{
     stroke: #BFE2FF;
     stroke-width: 4;
     transition: 0.5s;
-    margin: 4px;
+    margin: 0.5vh;
 }
 .quantity_inner .bt_minus:hover svg,
 .quantity_inner .bt_plus:hover svg {
@@ -279,7 +279,7 @@ h10{
     position: absolute;
     top: 1.7vh;
     left: 33vw;
-    font-size: 25px;
+    font-size: 3vh;
     color: #FFF;
     font-family:Menlo,Monaco,Consolas,"Courier New",monospace;
 
