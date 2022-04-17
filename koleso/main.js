@@ -161,7 +161,8 @@ function spinTo(winner, duration) {
             else balance = balance + document.getElementById('input1').value * massiv[winner];
             change2('Balance: ' + balance +' $');
             if (sections[winner] != '0.00×') {
-                audio1.play();}
+                //audio1.play();
+                }
             running = false;
         }
     }
@@ -243,7 +244,7 @@ let x = null
 function start() {
     if (balance >=document.getElementById('input1').value) {
         if (!running) {
-            audio2.play();
+            //audio2.play();
             change("", "#14222f")
             if (demo == 1) {
                 x = Math.random() * sections.length | 0;
