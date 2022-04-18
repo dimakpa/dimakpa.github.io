@@ -1,4 +1,7 @@
 body{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
     background: #0f212e
 }
 
