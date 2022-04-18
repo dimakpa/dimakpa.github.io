@@ -8,15 +8,38 @@ h2{
     text-align: center;
 }
 h3{
-    color: black;
-    font: 2vmin Arial;
+    color: #ffffff;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgb(0, 0, 0);
+    font: 1vmax Arial;
+    font-weight: bold;
+    font-size: 4vh;
+    position: absolute;
+    top  : -3vh;
+    left: 0vw;
     text-align: center;
-}
+    width  : 100%;
 
+}
 body{
     background: #28525c;
 }
 
+#rectangle {
+    width: 100vw;
+    height: 8vh;
+    background: #1a2c38;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.39);
+}
+
+#rectangle2 {
+    position: absolute;
+    left:30vw;
+    width: 40vw;
+    height: 7vh;
+
+    background: #0f212e;
+    border-radius: 1vmin;
+}
 .button {
     background-color: #28525c;
     border: #9c9c9c;
@@ -109,10 +132,67 @@ body{
     transform: translateY(4px);
 }
 
-/*canvas{*/
-/*    position: absolute;*/
-/*    left: 33vw;*/
-/*}*/
+canvas{
+    position: absolute;
+    left: 50vw;
+}
+/* for random particle*/
+.quantity_inner2 * {
+    box-sizing: border-box;
+}
+.quantity_inner2 {
+    display: flex;
+    position: absolute;
+    top: 30vh;
+    left: 1vw;
+    border: 4px solid #1a2c38;
+}
+.quantity_inner2 .bt_minus2,
+.quantity_inner2 .bt_plus2,
+.quantity_inner2 .quantity2 {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+    outline: 0;
+}
+.quantity_inner2 .bt_minus2,
+.quantity_inner2 .bt_plus2 {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 10px;
+}
+.quantity_inner2 .bt_plus2 {
+    top: 2px;
+}
+.quantity_inner2 .bt_minus2 {
+    bottom: 2px;
+}
+.quantity_inner2 .quantity2 {
+    width: 60px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin-right: 30px;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+.quantity_inner2 .bt_minus2 svg,
+.quantity_inner2 .bt_plus2 svg {
+    stroke: #337AB7;
+    stroke-width: 4;
+    transition: 0.5s;
+    fill: none;
+}
+.quantity_inner2 .bt_minus2:hover svg,
+.quantity_inner2 .bt_plus2:hover svg {
+    stroke: #000;
+}
+
 
 /*для + и - */
 .quantity_inner * {
@@ -121,7 +201,7 @@ body{
 .quantity_inner {
     display: flex;
     position: absolute;
-    top: 5.5vh;
+    top: 50vh;
     left: 1vw;
     /*justify-content: center;*/
 }
@@ -129,7 +209,7 @@ body{
 .quantity_inner .bt_plus,
 .quantity_inner .quantity {
     color: #ffffff;
-    height: 5vh;
+    height: 15vh;
     width: 7vw;
     padding: 0;
     margin: 1vh 0.3vw;
@@ -162,8 +242,8 @@ body{
 
 #start{
     position: absolute;
-    top: 1.2vh;
-    left: 48vw;
+    top: 70vh;
+    left: 5vw;
     width: 34vw;
     height: 12vh;
     border-radius: 2vmin;
@@ -179,7 +259,7 @@ body{
 
 h10{
     position: absolute;
-    top: 1.7vh;
+    top: 7vh;
     left: 33vw;
     font-size: 3vh;
     color: #FFF;
