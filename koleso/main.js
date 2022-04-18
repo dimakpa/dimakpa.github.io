@@ -249,7 +249,7 @@ function start() {
             //audio2.play();
             change("", "#14222f")
             if (demo == 1) {
-                x = Math.random() * sections.length | 0;
+                x = Math.random() * sections.length | 0; spinTo(x, 1500);
             } else {
                 x = Math.random() * sections.length | 0;
                 if (massiv[x] == 0) {
