@@ -1,6 +1,4 @@
 
-var viewportmeta = document.querySelector('meta[name="viewport"]');
-    viewportmeta.content = 'user-scalable=NO, width=device-width, initial-scale=1.0'
 
 let canvas = document.getElementById("canvas");
 
