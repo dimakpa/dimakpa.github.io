@@ -242,8 +242,8 @@ h4{
 .quantity_inner .bt_plus,
 .quantity_inner .quantity {
     color: #ffffff;
-    height: 4vw;
-    width: 4vw;
+    height: 5vw;
+    width: 5vw;
     padding: 0;
     margin: 1vh 0.3vw;
     border-radius: 10px;
@@ -254,7 +254,7 @@ h4{
     box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
 }
 .quantity_inner .quantity {
-    width: 10vw;
+    width: 12vw;
     text-align: center;
     font-size: 2.7vw;
     color: #FFF;
@@ -277,7 +277,7 @@ h4{
 h10{
     position: absolute;
     top: 1.3vw;
-    left: 13vw;
+    left: 15vw;
     font-size: 2.5vw;
     color: #FFF;
     font-family:Menlo,Monaco,Consolas,"Courier New",monospace;
