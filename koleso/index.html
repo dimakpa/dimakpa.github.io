@@ -37,6 +37,12 @@
                     this.value = parseInt($(this).data('max-count'));
                 }
             });
+            $(document).keydown(function(event) {
+    if (event.ctrlKey==true && (event.which == '107' || event.which == '109')) {
+        alert('disabling zooming ! ');
+        event.preventDefault();
+     }
+});
         });
     </script>
 </head>
