@@ -1,6 +1,7 @@
-
-
 let canvas = document.getElementById("canvas");
+
+
+
 
 let demo = 0;
 
