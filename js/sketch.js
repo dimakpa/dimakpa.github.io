@@ -48,8 +48,8 @@ function setup() {
             console.log(labelA, labelB);
             if (labelA === 'box' && labelB === 'particle') {
                 prise_box = Number(pairs[i].bodyA.price);
-                balance = balance + (100*prise_box);
-                document.getElementById("balance").innerHTML = balance.toString();
+                balance = balance + (document.getElementById('input1').value*prise_box);
+                document.getElementById("balance").innerHTML = "Balance: " + balance.toString() + "$";
                 G=0;
                 //World.remove(particles.pop());
                 //particles.shift();
@@ -57,8 +57,8 @@ function setup() {
             }
             else if (labelA === 'particle' && labelB === 'box') {
                 prise_box = Number(pairs[i].bodyB.price);
-                balance = balance + (100*prise_box);
-                document.getElementById("balance").innerHTML = balance.toString();
+                balance = balance + (document.getElementById('input1').value*prise_box);
+                document.getElementById("balance").innerHTML = "Balance: " + balance.toString() + "$";
                 G=0;
                 //World.remove(pairs[i].bodyA);
                 //particles.shift();
@@ -69,7 +69,7 @@ function setup() {
     Events.on(engine, 'collisionStart', collision);
 
     newParticle();
-    var spacingX = width / (cols);
+    var spacingX = width / cols;
     var spacingY = width / cols;
     for (var j = 0; j < rows; j++) {
         for (var i = 0; i < cols + 1; i++) {
@@ -93,37 +93,37 @@ function setup() {
         var b = new Boundary(x, y, w, h);
         bounds.push(b);
     }
-    var b = new Boundary(spacingX*(i-2), y, w, X*2);
+    var b = new Boundary(spacingX*(i-2)-1, y, w, X*2);
     bounds.push(b);
-    var b = new Boundary(0, y, w, X*2);
+    var b = new Boundary(1, y, w, X*2);
     bounds.push(b);
 
     //боксы для подсчета
-    var b = new Box(X/13/2, height-h/4, X*0.9/cols, h/3, "#1CF80D", 10);
+    var b = new Box(X/13/2, height-h/4, X*0.9/cols, h/3, "#1CF80D", 26);
     bounds.push(b);
-    var b = new Box(X/13/2*3, height-h/4, X*0.9/cols, h/3, "#6dde00", 5);
+    var b = new Box(X/13/2*3, height-h/4, X*0.9/cols, h/3, "#6dde00", 9);
     bounds.push(b);
-    var b = new Box(X/13/2*5, height-h/4, X*0.9/cols, h/3, "#2fa101", 2);
+    var b = new Box(X/13/2*5, height-h/4, X*0.9/cols, h/3, "#2fa101", 4);
     bounds.push(b);
-    var b = new Box(X/13/2*7, height-h/4, X*0.9/cols, h/3, "#466c79", 0.8);
+    var b = new Box(X/13/2*7, height-h/4, X*0.9/cols, h/3, "#466c79", 2);
     bounds.push(b);
-    var b = new Box(X/13/2*9, height-h/4, X*0.9/cols, h/3, "#31415e", 2);
+    var b = new Box(X/13/2*9, height-h/4, X*0.9/cols, h/3, "#31415e", 0.6);
     bounds.push(b);
-    var b = new Box(X/13/2*11, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.3);
+        var b = new Box(X/13/2*11, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.4);
     bounds.push(b);
-    var b = new Box(X/13/2*13, height-h/4, X*0.9/cols, h/3, "#1b1f2a", 2);
+    var b = new Box(X/13/2*13, height-h/4, X*0.9/cols, h/3, "#1b1f2a", 0.2);
     bounds.push(b);
-    var b = new Box(X/13/2*15, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.3);
+    var b = new Box(X/13/2*15, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.4);
     bounds.push(b);
-    var b = new Box(X/13/2*17, height-h/4, X*0.9/cols, h/3, "#31415e", 2);
+    var b = new Box(X/13/2*17, height-h/4, X*0.9/cols, h/3, "#31415e", 0.6);
     bounds.push(b);
-    var b = new Box(X/13/2*19, height-h/4, X*0.9/cols, h/3, "#466c79", 0.8);
+    var b = new Box(X/13/2*19, height-h/4, X*0.9/cols, h/3, "#466c79", 2);
     bounds.push(b);
-    var b = new Box(X/13/2*21, height-h/4, X*0.9/cols, h/3, "#2fa101", 2);
+    var b = new Box(X/13/2*21, height-h/4, X*0.9/cols, h/3, "#2fa101", 4);
     bounds.push(b);
-    var b = new Box(X/13/2*23, height-h/4, X*0.9/cols, h/3, "#6dde00", 5);
+    var b = new Box(X/13/2*23, height-h/4, X*0.9/cols, h/3, "#6dde00", 9);
     bounds.push(b);
-    var b = new Box(X/13/2*25, height-h/4, X*0.9/cols, h/3, "#1CF80D", 10);
+    var b = new Box(X/13/2*25, height-h/4, X*0.9/cols, h/3, "#1CF80D", 26);
     bounds.push(b);
 }
 
@@ -132,47 +132,52 @@ function RandomParticle(min, max){
 }
 
 function newParticle() {
-    var x = RandomParticle(X/2 - X*0.05, X/2 + X*0.05);
+    if (document.getElementById('input2').value == 1){
+        var x = RandomParticle(X/2 - X*0.05, X/2 + X*0.05);
+    }else if(document.getElementById('input2').value == 2){
+        var x = RandomParticle(X/2 - X*0.09, X/2 + X*0.09);
+    }else if(document.getElementById('input2').value == 3){
+        var x = RandomParticle(X/2 - X*0.14, X/2 + X*0.14);
+    }else if(document.getElementById('input2').value == 4){
+        var x = RandomParticle(X/2 - X*0.19, X/2 + X*0.19);
+    }else if(document.getElementById('input2').value == 5){
+        var x = RandomParticle(X/2 - X*0.23, X/2 + X*0.23);
+    }else if(document.getElementById('input2').value == 6){
+        var x = RandomParticle(X/2 - X*0.27, X/2 + X*0.27);
+    }
+     //var x = RandomParticle(X/2 - X*0.3, X/2 + X*0.3);
+    // //var x = RandomParticle(X/2 - X*0.05, X/2 + X*0.05);
     var p = new Particle(x, X*0.03, rParticle);
     particles.push(p);
 }
 
 function changebalance(){
-    document.getElementById("click").innerHTML = click.toString();
-    document.getElementById("balance").innerHTML = balance.toString();
+    document.getElementById("balance").innerHTML = "Balance: " + balance.toString() + "$";
 
 }
-
-function mousePressed(){
+//старт программы по клику
+function start(){
+    //проверка баланса
+    var balance_check = document.getElementById('input1').value + (document.getElementById('input2').value *document.getElementById('input1').value)/10;
+    if(balance===0 || balance < 0 || balance - document.getElementById('input1').value - (document.getElementById('input2').value *document.getElementById('input1').value)/10 <=0){//|| balance_check >= balance){
+            Flag = 0;
+    }else {
     //ding.play();
     click++;
-    balance = balance - 100;
-    if(balance===0){
-        Flag = 1;
-    }else {
+    //повышение шанса на выигрыш
+    balance = balance - document.getElementById('input1').value - (document.getElementById('input2').value *document.getElementById('input1').value)/10;
+    changebalance();
         Flag = 1;
         changebalance();
     }
-
 }
 
-document.addEventListener('keydown', function(event) {
-    if (event.code === 'Space') {
-        click++;
-        balance = balance - 100;
-        if(balance===0){
-            Flag = 1;
-        }else {
-            changebalance();
-            Flag = 1;
-        }
-    }
-});
 
 function draw() {
     if(particles[0]){
         particles[0].show();
     }
+    //background("#28525c");
     background("#FFE4B5");
     if (Flag === 1) {
         newParticle();

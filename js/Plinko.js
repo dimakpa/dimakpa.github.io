@@ -12,6 +12,7 @@ function Plinko(x, y, r) {
 
 Plinko.prototype.show = function() {
     noStroke();
+    //fill("#FFE4B5")
     fill("#28525c");
     var pos = this.body.position;
     push();

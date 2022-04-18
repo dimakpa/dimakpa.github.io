@@ -1,3 +1,4 @@
+/*ВЕРТИКАЛЬНАЯ РАСКЛАДКА*/
 * {
     box-sizing: border-box;
 }
@@ -10,6 +11,10 @@ h3{
     color: black;
     font: 2vmin Arial;
     text-align: center;
+}
+
+body{
+    background: #28525c;
 }
 
 .button {
