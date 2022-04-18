@@ -5,7 +5,7 @@ let canvas = document.getElementById("canvas");
 
 
 
-let demo = 1;
+let demo = 0;
 
 let sections = ["0.00×", "30.00×", "0.00×", "3.00×", "0.00×",
     "1.70×", "0.00×", "2.00×", "0.00×", "1.50×",
