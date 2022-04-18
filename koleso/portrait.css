@@ -2,7 +2,7 @@ body{
     padding: 0px;
     margin: 0px;
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
     background: #0f212e
 }
 
@@ -193,7 +193,7 @@ h2 {
     font-size: 4vh;
     position: absolute;
     left: 0vw;
-    top	: 35vh;
+    top	: 35%;
     text-align: center;
     width	: 100%;
 
