@@ -8,17 +8,16 @@ h2{
     text-align: center;
 }
 h3{
-    color: #ffffff;
+   color: #ffffff;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgb(0, 0, 0);
     font: 1vmax Arial;
     font-weight: bold;
-    font-size: 4vh;
+    font-size: 2vmax;
     position: absolute;
-    top  : -3vh;
+    top	: -1vh;
     left: 0vw;
     text-align: center;
-    width  : 100%;
-
+    width	: 100%;
 }
 body{
     background: #28525c;
