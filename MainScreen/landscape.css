@@ -1,0 +1,26 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    height: 100%;
+    background: #0f212e
+}
+
+canvas{
+    background: #1576c2
+
+}
+
+h2 {
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.62);
+    color: #14222FFF;
+    font: 2vh Arial;
+    font-weight: bold;
+    font-size: 5vh;
+    position: absolute;
+    left: 20vw;
+    top	: 48vh;
+    text-align: center;
+    width	: 100%;
+
+}
