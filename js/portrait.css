@@ -134,7 +134,7 @@ body{
 
 canvas{
     position: absolute;
-    left: 50vw;
+    left: 0;
 }
 /* for random particle*/
 .quantity_inner2 * {
@@ -201,7 +201,7 @@ canvas{
 .quantity_inner {
     display: flex;
     position: absolute;
-    top: 50vh;
+    top: 10vh;
     left: 1vw;
     /*justify-content: center;*/
 }
@@ -242,7 +242,7 @@ canvas{
 
 #start{
     position: absolute;
-    top: 70vh;
+    top: 0vh;
     left: 5vw;
     width: 34vw;
     height: 12vh;
