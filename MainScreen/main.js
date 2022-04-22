@@ -1,4 +1,4 @@
-var a = 'http://dimakpa.github.io/'; //ссылка должна быть в ковычках, так как это строка
+var a = 'https://ru.stackoverflow.com/questions/413328/Как-подключить-файл-js-к-другому-файлу-js'; //ссылка должна быть в ковычках, так как это строка
 
 
 function start() {
