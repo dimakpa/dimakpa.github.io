@@ -1,11 +1,9 @@
-
-
 let canvas = document.getElementById("canvas");
 
 
 
 
-let demo = 0;
+let demo = 1;
 
 let sections = ["0.00×", "30.00×", "0.00×", "3.00×", "0.00×",
     "1.70×", "0.00×", "2.00×", "0.00×", "1.50×",
@@ -33,7 +31,8 @@ let cx = null;
 let cy = null;
 
 function repaint(angle) {
-    if (innerWidth > innerHeight){r = Math.min(innerWidth, innerHeight) * 0.4; }
+    if (innerWidth > innerHeight){r = Math.max(innerWidth, innerHeight) * 0.2; }
+    // else if (innerWidth < 1.5*innerHeight && innerWidth >innerHeight) {r = Math.min(innerWidth, innerHeight) * 0.25;}
     else {r = Math.min(innerWidth, innerHeight) * 0.3;}
     //let r = Math.min(innerWidth, innerHeight) * 0.33;
     if (wheels === null) {
@@ -108,7 +107,8 @@ function repaint(angle) {
 
     canvas.width = innerWidth;
     canvas.height = innerHeight;
-    if (innerWidth > innerHeight){cx = innerWidth/1.4, cy = innerHeight/2; }
+    if (innerWidth > innerHeight){cx = innerWidth/1.44, cy = innerHeight/2.15; }
+    // else if (innerWidth < 1.5*innerHeight && innerWidth >innerHeight) {cx = innerWidth/1.36, cy = innerHeight/2.15;}
     else {cx = innerWidth/2, cy = innerHeight/3.1;}
     //let cx = innerWidth/1.65, cy = innerHeight/2.4;
     let ctx = canvas.getContext("2d");
@@ -249,7 +249,8 @@ function start() {
             //audio2.play();
             change("", "#14222f")
             if (demo == 1) {
-                x = Math.random() * sections.length | 0; spinTo(x, 1500);
+                x = Math.random() * sections.length | 0;
+                spinTo(x, 1500);
             } else {
                 x = Math.random() * sections.length | 0;
                 if (massiv[x] == 0) {
@@ -270,6 +271,11 @@ function start() {
         }
     }
 
+}
+
+
+function back() {
+    window.open('http://dimakpa.github.io/MainScreen', '_self').focus();
 }
 
 let csz = null;
