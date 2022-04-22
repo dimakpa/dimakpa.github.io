@@ -225,19 +225,21 @@ canvas{
 .quantity_inner2 {
     display: flex;
     position: absolute;
-    top: 2vh;
+    top: 3vh;
     left: 1vw;
     border: 4px solid #1a2c38;
 }
 .quantity_inner2 .bt_minus2,
 .quantity_inner2 .bt_plus2,
 .quantity_inner2 .quantity2 {
+    color: #ffffff;
     height: 40px;
     width: 40px;
     padding: 0;
-    border: 0;
-    margin: 0;
-    background: transparent;
+    margin: 1vh 0.3vw;
+    border-radius: 10px;
+    border: 0.5vw solid #2f4553;
+    background: #0f212e;
     cursor: pointer;
     outline: 0;
 }
@@ -265,14 +267,14 @@ canvas{
 }
 .quantity_inner2 .bt_minus2 svg,
 .quantity_inner2 .bt_plus2 svg {
-    stroke: #337AB7;
+    stroke: #ffffff;
     stroke-width: 4;
     transition: 0.5s;
     fill: none;
 }
 .quantity_inner2 .bt_minus2:hover svg,
 .quantity_inner2 .bt_plus2:hover svg {
-    stroke: #000;
+    stroke: #ffffff;
 }
 
 
