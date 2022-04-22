@@ -32,6 +32,7 @@ body{
     left: 3vw;
     width: 10vw;
     height: 5vh;
+    text-align: center;
     border-radius: 1vmin;
     /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.58);*/
     background: #d3e6f0;
