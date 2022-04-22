@@ -63,75 +63,6 @@ body{
     transform: translateY(4px);
 }
 
-.button2{
-    background-color: #28525c; /* Green */
-    border: #9c9c9c;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    height: 9vh;
-    width: 24vw;
-    cursor: pointer;
-    position: absolute;
-    left: 26vw;
-    bottom: 0;
-}
-.button2:hover {background-color: #28525c}
-.button2:active {
-    background-color: #28525c;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-.button3{
-    background-color: #28525c; /* Green */
-    border: #9c9c9c;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    height: 9vh;
-    width: 24vw;
-    cursor: pointer;
-    position: absolute;
-    left: 52vw;
-    bottom: 0;
-}
-.button3:hover {background-color: #28525c}
-.button3:active {
-    background-color: #28525c;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-.button4{
-    background-color: #28525c; /* Green */
-    border: #9c9c9c;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    height: 9vh;
-    width: 24vw;
-    cursor: pointer;
-    position: absolute;
-    left: 78vw;
-    bottom: 0;
-}
-.button4:hover {background-color: #28525c}
-.button4:active {
-    background-color: #28525c;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
 canvas{
     position: absolute;
     left: 0;
@@ -201,7 +132,7 @@ canvas{
 .quantity_inner {
     display: flex;
     position: absolute;
-    top: 10vh;
+    top: 5.5vh;
     left: 1vw;
     /*justify-content: center;*/
 }
@@ -209,7 +140,7 @@ canvas{
 .quantity_inner .bt_plus,
 .quantity_inner .quantity {
     color: #ffffff;
-    height: 15vh;
+    height: 5vh;
     width: 7vw;
     padding: 0;
     margin: 1vh 0.3vw;
@@ -239,6 +170,7 @@ canvas{
 .quantity_inner .bt_plus:hover svg {
     stroke: #FFF;
 }
+
 /*кнопка bet*/
 #start{
     position: absolute;
