@@ -39,6 +39,19 @@ body{
     background: #0f212e;
     border-radius: 1vmin;
 }
+
+#bet_amount{
+    position: absolute;
+    color: #b0b9d2;
+    top: 2vh;
+    left: 3vw;
+    font-size: 3vw;
+    line-height: 6vw;
+    font-weight: bold;
+    font-family: Arial; /* Гарнитура шрифта */
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 .button {
     background-color: #28525c;
     border: #9c9c9c;
