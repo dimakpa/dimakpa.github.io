@@ -172,6 +172,10 @@ function start(){
     }
 }
 
+function back() {
+    window.open('http://dimakpa.github.io/MainScreen', '_self').focus();
+}
+
 
 function draw() {
     if(particles[0]){
