@@ -26,6 +26,25 @@ body{
 
 }
 
+#back{
+    position: absolute;
+    top: 1.5vh;
+    left: 3vw;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 1vmin;
+    /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.58);*/
+    background: #d3e6f0;
+    /*font: 2vh Trebuchet MS, sans-serif;*/
+    color: #0f212e;
+    font-size: 1.71vh;
+    line-height: 3vw;
+    font-weight: bold;
+    font-family: Arial, Helvetica, Verdana, sans-serif; /* Гарнитура шрифта */
+
+
+}
+
 /*#start:hover {*/
 /*    color: #ffffff;*/
 /*    background: rgb(0, 255, 3);*/
