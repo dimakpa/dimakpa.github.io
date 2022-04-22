@@ -12,7 +12,7 @@ h3{
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgb(0, 0, 0);
     font: 1vmax Arial;
     font-weight: bold;
-    font-size: 1vmax;
+    font-size: 2vmax;
     position: absolute;
     top	: -1vh;
     left: 0vw;
@@ -43,10 +43,10 @@ body{
 #bet_amount{
     position: absolute;
     color: #b0b9d2;
-    top: 2vh;
+    top: 1vh;
     left: 3vw;
     font-size: 3vw;
-    line-height: 6vw;
+    line-height: 4vw;
     font-weight: bold;
     font-family: Arial; /* Гарнитура шрифта */
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -86,7 +86,7 @@ canvas{
 .quantity_inner2 {
     display: flex;
     position: absolute;
-    top: 10vh;
+    top: 20vh;
     left: 1vw;
     border: 4px solid #1a2c38;
 }
