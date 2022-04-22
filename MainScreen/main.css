@@ -1,0 +1,45 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    height: 100%;
+    background: #0f212e
+}
+
+#wheel{
+    position: absolute;
+    top: 10vh;
+    left: 15vw;
+    width: 70vw;
+    height: 12vh;
+    border-radius: 2vmin;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.58);
+    background: #00e602;
+    /*font: 2vh Trebuchet MS, sans-serif;*/
+    color: #064f08;
+    font-size: 4vw;
+    line-height: 6vw;
+    font-weight: bold;
+    font-family: Arial, Helvetica, Verdana, sans-serif; /* Гарнитура шрифта */
+
+
+}
+
+#plinko{
+    position: absolute;
+    top: 25vh;
+    left: 15vw;
+    width: 70vw;
+    height: 12vh;
+    border-radius: 2vmin;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.58);
+    background: #00e602;
+    /*font: 2vh Trebuchet MS, sans-serif;*/
+    color: #064f08;
+    font-size: 4vw;
+    line-height: 6vw;
+    font-weight: bold;
+    font-family: Arial, Helvetica, Verdana, sans-serif; /* Гарнитура шрифта */
+
+
+}
