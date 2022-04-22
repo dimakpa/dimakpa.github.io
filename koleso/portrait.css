@@ -75,7 +75,7 @@ body{
 }
 
 
-#rectangle0{
+#rectangle02{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
@@ -87,12 +87,12 @@ body{
     color: white;
     font-size: 3.5vw;
     line-height: 8vw;
-    background: #406c80;
+    background: #1b1f2a;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
 
-#rectangle15{
+#rectangle04{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
@@ -104,7 +104,7 @@ body{
     color: white;
     font-size: 3.5vw;
     line-height: 8vw;
-    background: #00e304;
+    background: #2d313a;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
@@ -121,7 +121,7 @@ body{
 
 }
 
-#rectangle17{
+#rectangle06{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
@@ -133,7 +133,7 @@ body{
     color: white;
     font-size: 3.5vw;
     line-height: 8vw;
-    background: #d4e7f1;
+    background: #31415e;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
@@ -150,12 +150,12 @@ body{
     color: white;
     font-size: 3.5vw;
     line-height: 8vw;
-    background: #fce805;
+    background: #466c79;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
 
-#rectangle30{
+#rectangle90{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
@@ -167,12 +167,12 @@ body{
     color: white;
     font-size: 3.5vw;
     line-height: 8vw;
-    background: #7e46fc;
+    background: #6dde00;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
 
-#rectangle4{
+#rectangle40{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
@@ -184,7 +184,24 @@ body{
     color: white;
     font-size: 3.5vw;
     line-height: 8vw;
-    background: #fba22f;
+    background: #2fa101;
+    border-radius: 2vmin;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
+}
+
+#rectangle26{
+    text-align: center;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
+    position: absolute;
+    top: 73vh;
+    left: 79vw;
+    width: 13vw;
+    height: 8vw;
+    font: 2vh Trebuchet MS, sans-serif;
+    color: white;
+    font-size: 3.5vw;
+    line-height: 8vw;
+    background: #1CF80D;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
