@@ -239,7 +239,7 @@ canvas{
 .quantity_inner .bt_plus:hover svg {
     stroke: #FFF;
 }
-
+/*кнопка bet*/
 #start{
     position: absolute;
     top: 1.2vh;
@@ -258,7 +258,7 @@ canvas{
 
 
 }
-
+/*кнопка назад*/
 #back{
     position: absolute;
     top: 1.5vh;
@@ -275,8 +275,17 @@ canvas{
     line-height: 3vw;
     font-weight: bold;
     font-family: Arial, Helvetica, Verdana, sans-serif; /* Гарнитура шрифта */
+}
 
-
+#rectanglebig{
+    position: absolute;
+    top: 82vh;
+    left: 9vw;
+    width: 83vw;
+    height: 15vh;
+    background: #213743;
+    border-radius: 1vmin;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
 
 h10{
