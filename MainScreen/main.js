@@ -3,6 +3,6 @@ var a = 'http://dimakpa.github.io/koleso/'; //ссылка должна быть
 
 function start() {
 
-    window.open(a);
+    window.open(a, '_self').focus();
 }
 
