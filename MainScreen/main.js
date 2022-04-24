@@ -127,7 +127,7 @@ function repaint(angle) {
 }
 
 function change(text, color){
-    document.getElementById("simple").innerHTML=Telegram.WebApp.initDataUnsafe.user.id;
+    document.getElementById("simple").innerHTML=text;
     document.getElementById("simple").style.color=color;
 }
 
