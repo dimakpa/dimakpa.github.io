@@ -182,7 +182,7 @@ body{
 
 }
 
-canvas{
+#canvas1{
     position: absolute;
     top: 5vh;
     left: 5vw;
@@ -190,12 +190,9 @@ canvas{
 
 }
 
-canvas_plinko{
+canvas{
     position: absolute;
-    top: 5vh;
-    left: 35vw;
-    background: #0f212e
-
+    left: 0;
 }
 
 h2 {
