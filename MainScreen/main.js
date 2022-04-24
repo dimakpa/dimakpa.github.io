@@ -1,7 +1,7 @@
 let canvas = document.getElementById("canvas");
 
 // window.Telegram.WebApp.IsExpanded = True;
-
+window.Telegram.MainButton.color = "#FBA22FFF"
 
 let sections = ["0.00×", "30.00×", "0.00×", "3.00×", "0.00×",
     "1.70×", "0.00×", "2.00×", "0.00×", "1.50×",
