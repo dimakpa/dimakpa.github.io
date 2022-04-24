@@ -12,13 +12,14 @@ var cols = 13;
 var rows = 9;
 var buttoon
 var click =1;
-var balance = 5000;
 var G=1;
 
-var ding;
-// function preload(){
-//     ding = loadSound('audio1.mp3');
-// }
+
+// Telegram.WebApp.initDataUnsafe.user.id
+var balance = 5000;
+
+
+
 
 let X;
 let Flag = 0;
@@ -27,6 +28,8 @@ if(innerWidth >= innerHeight) {
 }else{
     X = Math.min(innerWidth, innerHeight);
 }
+
+
 
 var rParticle = X*0.0172;
 var rPlinko = X*0.02;
@@ -47,18 +50,18 @@ function setup() {
             let prise_box;
             console.log(labelA, labelB);
             if (labelA === 'box' && labelB === 'particle') {
-                prise_box = Number(pairs[i].bodyA.price);
-                balance = balance + (document.getElementById('input1').value*prise_box);
-                document.getElementById("balance").innerHTML = "Balance: " + balance.toString() + "$";
+                // prise_box = Number(pairs[i].bodyA.price);
+                // balance = balance + (document.getElementById('input1').value*prise_box);
+                // document.getElementById("balance").innerHTML = "Balance: " + balance.toString() + "$";
                 G=0;
                 //World.remove(particles.pop());
                 //particles.shift();
                 //pairs[i].destroy();
             }
             else if (labelA === 'particle' && labelB === 'box') {
-                prise_box = Number(pairs[i].bodyB.price);
-                balance = balance + (document.getElementById('input1').value*prise_box);
-                document.getElementById("balance").innerHTML = "Balance: " + balance.toString() + "$";
+                // prise_box = Number(pairs[i].bodyB.price);
+                // balance = balance + (document.getElementById('input1').value*prise_box);
+                // document.getElementById("balance").innerHTML = "Balance: " + balance.toString() + "$";
                 G=0;
                 //World.remove(pairs[i].bodyA);
                 //particles.shift();
@@ -109,7 +112,7 @@ function setup() {
     bounds.push(b);
     var b = new Box(X/13/2*9, height-h/4, X*0.9/cols, h/3, "#31415e", 0.6);
     bounds.push(b);
-        var b = new Box(X/13/2*11, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.4);
+    var b = new Box(X/13/2*11, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.4);
     bounds.push(b);
     var b = new Box(X/13/2*13, height-h/4, X*0.9/cols, h/3, "#1b1f2a", 0.2);
     bounds.push(b);
@@ -145,36 +148,51 @@ function newParticle() {
     }else if(document.getElementById('input2').value == 6){
         var x = RandomParticle(X/2 - X*0.27, X/2 + X*0.27);
     }
-     //var x = RandomParticle(X/2 - X*0.3, X/2 + X*0.3);
+    //var x = RandomParticle(X/2 - X*0.3, X/2 + X*0.3);
     // //var x = RandomParticle(X/2 - X*0.05, X/2 + X*0.05);
     var p = new Particle(x, X*0.03, rParticle);
     particles.push(p);
 }
 
-function changebalance(){
-    document.getElementById("balance").innerHTML = "Balance: " + balance.toString() + "$";
+// function changebalance(){
+//     document.getElementById("balance").innerHTML = "Balance: " + balance.toString() + "$";
+// }
 
+function mousePressed(){
+    click++;
+    Flag = 1;
 }
+//
+// function search_id(){
+//     // const fs = require('fs');
+//     fs.readFile(FILE_LOCATION, function (err, data) {
+//         if (err) throw err;
+//         if(data.includes('5012628435')){
+//             console.log(data)
+//         }
+//     });
+// }
+
 //старт программы по клику
 function start(){
-    //проверка баланса
-    var balance_check = document.getElementById('input1').value + (document.getElementById('input2').value *document.getElementById('input1').value)/10;
-    if(balance===0 || balance < 0 || balance - document.getElementById('input1').value - (document.getElementById('input2').value *document.getElementById('input1').value)/10 <=0){//|| balance_check >= balance){
-            Flag = 0;
-    }else {
-    //ding.play();
-    click++;
-    //повышение шанса на выигрыш
-    balance = balance - document.getElementById('input1').value - (document.getElementById('input2').value *document.getElementById('input1').value)/10;
-    changebalance();
-        Flag = 1;
-        changebalance();
-    }
+    // //проверка баланса
+    // var balance_check = document.getElementById('input1').value + (document.getElementById('input2').value *document.getElementById('input1').value)/10;
+    // if(balance===0 || balance < 0 || balance - document.getElementById('input1').value - (document.getElementById('input2').value *document.getElementById('input1').value)/10 <=0){//|| balance_check >= balance){
+    //     Flag = 0;
+    // }else{
+        //ding.play();
+        //click++;
+        //повышение шанса на выигрыш
+        //balance = balance - document.getElementById('input1').value - (document.getElementById('input2').value *document.getElementById('input1').value)/10;
+        //changebalance();
+        //Flag = 1;
+        //changebalance();
+    //}
 }
 
-function back() {
-    window.open('http://dimakpa.github.io/MainScreen', '_self').focus();
-}
+// function back() {
+//     window.open('http://dimakpa.github.io/MainScreen', '_self').focus();
+// }
 
 
 function draw() {
