@@ -1,6 +1,6 @@
 
 
-let canvas = document.getElementById("canvas");
+let canvas = document.getElementById("canvas1");
 
 // window.Telegram.WebApp.IsExpanded = True;
 // window.Telegram.MainButton.color = "#FBA22FFF"
