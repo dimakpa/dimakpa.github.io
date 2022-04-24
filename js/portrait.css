@@ -8,7 +8,7 @@ h2{
     text-align: center;
 }
 h3{
-   color: #ffffff;
+    color: #ffffff;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgb(0, 0, 0);
     font: 1vmax Arial;
     font-weight: bold;
@@ -43,10 +43,22 @@ body{
 #bet_amount{
     position: absolute;
     color: #b0b9d2;
-    top: 1vh;
+    top: 5vh;
     left: 3vw;
     font-size: 3vw;
     line-height: 4vw;
+    font-weight: bold;
+    font-family: Arial; /* Гарнитура шрифта */
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#bet_chance{
+    position: absolute;
+    color: #b0b9d2;
+    top: 0vh;
+    left: 3vw;
+    font-size: 4.45vh;
+    line-height: 6vw;
     font-weight: bold;
     font-family: Arial; /* Гарнитура шрифта */
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -140,23 +152,6 @@ body{
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
 
-#rectangle90{
-    text-align: center;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
-    position: absolute;
-    top: 73vh;
-    left: 79vw;
-    width: 13vw;
-    height: 8vw;
-    font: 2vh Trebuchet MS, sans-serif;
-    color: white;
-    font-size: 3.5vw;
-    line-height: 8vw;
-    background: #6dde00;
-    border-radius: 2vmin;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
-}
-
 #rectangle40{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
@@ -170,6 +165,23 @@ body{
     font-size: 3.5vw;
     line-height: 8vw;
     background: #2fa101;
+    border-radius: 2vmin;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
+}
+
+#rectangle90{
+    text-align: center;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
+    position: absolute;
+    top: 73vh;
+    left: 79vw;
+    width: 13vw;
+    height: 8vw;
+    font: 2vh Trebuchet MS, sans-serif;
+    color: white;
+    font-size: 3.5vw;
+    line-height: 8vw;
+    background: #6dde00;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
@@ -225,7 +237,7 @@ canvas{
 .quantity_inner2 {
     display: flex;
     position: absolute;
-    top: 3vh;
+    top: 2vh;
     left: 1vw;
     border: 4px solid #1a2c38;
 }
@@ -285,7 +297,7 @@ canvas{
 .quantity_inner {
     display: flex;
     position: absolute;
-    top: 5.5vh;
+    top: 8vh;
     left: 1vw;
     /*justify-content: center;*/
 }
@@ -357,7 +369,7 @@ canvas{
     /*font: 2vh Trebuchet MS, sans-serif;*/
     color: #0f212e;
     font-size: 1.6vh;
-    line-height: 3vw;
+    line-height: 0vw;
     font-weight: bold;
     font-family: Arial, Helvetica, Verdana, sans-serif; /* Гарнитура шрифта */
 }
