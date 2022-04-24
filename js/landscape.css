@@ -24,6 +24,30 @@ body{
     background: #28525c;
 }
 
+#bet_amount{
+    position: absolute;
+    color: #b0b9d2;
+    top: 10vh;
+    left: 3vw;
+    font-size: 4.45vh;
+    line-height: 6vw;
+    font-weight: bold;
+    font-family: Arial; /* Гарнитура шрифта */
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#bet_chance{
+    position: absolute;
+    color: #b0b9d2;
+    top: 30vh;
+    left: 3vw;
+    font-size: 4.45vh;
+    line-height: 6vw;
+    font-weight: bold;
+    font-family: Arial; /* Гарнитура шрифта */
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 #rectangle {
     width: 100vw;
     height: 8vh;
@@ -34,14 +58,14 @@ body{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
-    top: 73vh;
-    left: 9vw;
-    width: 12vw;
-    height: 8vw;
+    top: 12vh;
+    left: 29vw;
+    width: 8vw;
+    height: 10vh;
     font: 2vh Trebuchet MS, sans-serif;
     color: white;
-    font-size: 3.5vw;
-    line-height: 8vw;
+    font-size: 2vw;
+    line-height: 12vh;
     background: #1b1f2a;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
@@ -51,14 +75,14 @@ body{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
-    top: 73vh;
-    left: 23vw;
-    width: 12vw;
-    height: 8vw;
+    top: 24vh;
+    left: 29vw;
+    width: 8vw;
+    height: 10vh;
     font: 2vh Trebuchet MS, sans-serif;
     color: white;
-    font-size: 3.5vw;
-    line-height: 8vw;
+    font-size: 2vw;
+    line-height: 12vh;
     background: #2d313a;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
@@ -66,28 +90,26 @@ body{
 
 #rectanglebig{
     position: absolute;
-    top: 82vh;
-    left: 9vw;
-    width: 83vw;
-    height: 15vh;
+    top: 8.3vh;
+    width: 27.5vw;
+    height: 92vh;
     background: #213743;
-    border-radius: 1vmin;
+    /*border-radius: 1vmin;*/
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
-
 }
 
 #rectangle06{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
-    top: 73vh;
-    left: 37vw;
-    width: 12vw;
-    height: 8vw;
+    top: 36vh;
+    left: 29vw;
+    width: 8vw;
+    height: 10vh;
     font: 2vh Trebuchet MS, sans-serif;
     color: white;
-    font-size: 3.5vw;
-    line-height: 8vw;
+    font-size: 2vw;
+    line-height: 12vh;
     background: #31415e;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
@@ -97,32 +119,15 @@ body{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
-    top: 73vh;
-    left: 51vw;
-    width: 12vw;
-    height: 8vw;
+    top: 48vh;
+    left: 29vw;
+    width: 8vw;
+    height: 10vh;
     font: 2vh Trebuchet MS, sans-serif;
     color: white;
-    font-size: 3.5vw;
-    line-height: 8vw;
+    font-size: 2vw;
+    line-height: 12vh;
     background: #466c79;
-    border-radius: 2vmin;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
-}
-
-#rectangle90{
-    text-align: center;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
-    position: absolute;
-    top: 73vh;
-    left: 79vw;
-    width: 13vw;
-    height: 8vw;
-    font: 2vh Trebuchet MS, sans-serif;
-    color: white;
-    font-size: 3.5vw;
-    line-height: 8vw;
-    background: #6dde00;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
@@ -131,15 +136,32 @@ body{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
-    top: 73vh;
-    left: 65vw;
-    width: 12vw;
-    height: 8vw;
+    top: 60vh;
+    left: 29vw;
+    width: 8vw;
+    height: 10vh;
     font: 2vh Trebuchet MS, sans-serif;
     color: white;
-    font-size: 3.5vw;
-    line-height: 8vw;
+    font-size: 2vw;
+    line-height: 12vh;
     background: #2fa101;
+    border-radius: 2vmin;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
+}
+
+#rectangle90{
+    text-align: center;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
+    position: absolute;
+    top: 72vh;
+    left: 29vw;
+    width: 8vw;
+    height: 10vh;
+    font: 2vh Trebuchet MS, sans-serif;
+    color: white;
+    font-size: 2vw;
+    line-height: 12vh;
+    background: #6dde00;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
 }
@@ -148,14 +170,14 @@ body{
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.63);
     position: absolute;
-    top: 73vh;
-    left: 79vw;
-    width: 13vw;
-    height: 8vw;
+    top: 84vh;
+    left: 29vw;
+    width: 8vw;
+    height: 10vh;
     font: 2vh Trebuchet MS, sans-serif;
     color: white;
-    font-size: 3.5vw;
-    line-height: 8vw;
+    font-size: 2vw;
+    line-height: 12vh;
     background: #1CF80D;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.09);
@@ -170,6 +192,26 @@ body{
     background: #0f212e;
     border-radius: 1vmin;
 }
+
+/*кнопка назад*/
+#back {
+    position: absolute;
+    top: 1.5vh;
+    left: 3vw;
+    width: 10vw;
+    height: 5vh;
+    text-align: center;
+    border-radius: 1vmin;
+    /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.58);*/
+    background: #d3e6f0;
+    /*font: 2vh Trebuchet MS, sans-serif;*/
+    color: #0f212e;
+    font-size: 1.6vh;
+    line-height: 0vw;
+    font-weight: bold;
+    font-family: Arial, Helvetica, Verdana, sans-serif; /* Гарнитура шрифта */
+}
+
 .button {
     background-color: #28525c;
     border: #9c9c9c;
@@ -193,75 +235,6 @@ body{
     transform: translateY(4px);
 }
 
-.button2{
-    background-color: #28525c; /* Green */
-    border: #9c9c9c;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    height: 9vh;
-    width: 24vw;
-    cursor: pointer;
-    position: absolute;
-    left: 26vw;
-    bottom: 0;
-}
-.button2:hover {background-color: #28525c}
-.button2:active {
-    background-color: #28525c;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-.button3{
-    background-color: #28525c; /* Green */
-    border: #9c9c9c;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    height: 9vh;
-    width: 24vw;
-    cursor: pointer;
-    position: absolute;
-    left: 52vw;
-    bottom: 0;
-}
-.button3:hover {background-color: #28525c}
-.button3:active {
-    background-color: #28525c;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-.button4{
-    background-color: #28525c; /* Green */
-    border: #9c9c9c;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    height: 9vh;
-    width: 24vw;
-    cursor: pointer;
-    position: absolute;
-    left: 78vw;
-    bottom: 0;
-}
-.button4:hover {background-color: #28525c}
-.button4:active {
-    background-color: #28525c;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
 canvas{
     position: absolute;
     left: 50vw;
@@ -273,47 +246,49 @@ canvas{
 .quantity_inner2 {
     display: flex;
     position: absolute;
-    top: 30vh;
-    left: 1vw;
-    border: 4px solid #1a2c38;
+    top: 42vh;
+    left: 10vw;
+    border-radius: 10px;
+    border: #00e602;
 }
 .quantity_inner2 .bt_minus2,
 .quantity_inner2 .bt_plus2,
 .quantity_inner2 .quantity2 {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     padding: 0;
-    border: 0;
     margin: 0;
-    background: transparent;
+    border-radius: 10px;
+    border: 3px solid #2f4553;
+    background: #0f212e;
     cursor: pointer;
     outline: 0;
 }
 .quantity_inner2 .bt_minus2,
 .quantity_inner2 .bt_plus2 {
     position: absolute;
-    height: 20px;
-    width: 20px;
-    right: 10px;
+    height: 30px;
+    width: 30px;
+    right: 0px;
 }
 .quantity_inner2 .bt_plus2 {
-    top: 2px;
+    top: 0px;
 }
 .quantity_inner2 .bt_minus2 {
-    bottom: 2px;
+    bottom: 0px;
 }
 .quantity_inner2 .quantity2 {
-    width: 60px;
+    width: 120px;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    color: #000;
+    color: #e8dfdf;
     margin-right: 30px;
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
 .quantity_inner2 .bt_minus2 svg,
 .quantity_inner2 .bt_plus2 svg {
-    stroke: #337AB7;
+    stroke: #e8dfdf;
     stroke-width: 4;
     transition: 0.5s;
     fill: none;
@@ -331,29 +306,29 @@ canvas{
 .quantity_inner {
     display: flex;
     position: absolute;
-    top: 50vh;
-    left: 1vw;
+    top: 20vh;
+    left: 2vw;
     /*justify-content: center;*/
 }
 .quantity_inner .bt_minus,
 .quantity_inner .bt_plus,
 .quantity_inner .quantity {
     color: #ffffff;
-    height: 15vh;
-    width: 7vw;
+    height: 5vw;
+    width: 5vw;
     padding: 0;
     margin: 1vh 0.3vw;
     border-radius: 10px;
-    border: 0.5vw solid #2f4553;
+    border: 3px solid #2f4553;
     background: #0f212e;
     cursor: pointer;
     outline: 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
 }
 .quantity_inner .quantity {
-    width: 30vw;
+    width: 12vw;
     text-align: center;
-    font-size: 3vh;
+    font-size: 2.7vw;
     color: #FFF;
     font-family:Menlo,Monaco,Consolas,"Courier New",monospace;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
@@ -362,8 +337,8 @@ canvas{
 .quantity_inner .bt_plus svg {
 
     stroke: #ffffff;
-    stroke-width: 4;
-    margin: 0.7vh;
+    stroke-width: 3;
+    margin: 0.1vh;
 }
 .quantity_inner .bt_minus:hover svg,
 .quantity_inner .bt_plus:hover svg {
@@ -372,16 +347,16 @@ canvas{
 
 #start{
     position: absolute;
-    top: 70vh;
-    left: 5vw;
-    width: 34vw;
-    height: 12vh;
+    top: 55vh;
+    left: 4vw;
+    width: 20vw;
+    height: 25vh;
     border-radius: 2vmin;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.58);
     background: #00e602;
     /*font: 2vh Trebuchet MS, sans-serif;*/
     color: #064f08;
-    font-size: 4vw;
+    font-size: 5vh;
     line-height: 6vw;
     font-weight: bold;
     font-family: Arial, Helvetica, Verdana, sans-serif; /* Гарнитура шрифта */
