@@ -1,6 +1,6 @@
 
 function change2(text){
-    document.getElementById("id").innerHTML=text;
+    document.getElementById("AYDI").innerHTML=text;
 }
 
 change2(Telegram.WebApp.initDataUnsafe.user.id);
