@@ -246,7 +246,7 @@ canvas{
 .quantity_inner2 .bt_plus2,
 .quantity_inner2 .quantity2 {
     color: #ffffff;
-    height: 80px;
+    height: 70px;
     width: 60px;
     padding: 0;
     /*margin: 1vh 0.3vw;*/
@@ -267,7 +267,7 @@ canvas{
     top: 0px;
 }
 .quantity_inner2 .bt_minus2 {
-    bottom: 0px;
+    bottom: 1px;
 }
 .quantity_inner2 .quantity2 {
     width: 120px;
