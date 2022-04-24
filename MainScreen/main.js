@@ -1,9 +1,4 @@
 
-function change2(text){
-    document.getElementById("AYDI").innerHTML=text;
-}
-
-change2(Telegram.WebApp.initDataUnsafe.user.id);
 
 let canvas = document.getElementById("canvas");
 
