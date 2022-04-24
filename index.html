@@ -9,7 +9,7 @@
     <script src="libraries/matter.min.js"></script>
     <script type="text/javascript" src="js/sketch.js"></script>
     <script type="text/javascript" src="js/particle.js"></script>
-<!--    <link rel="stylesheet" href="js/sketch.css" type="text/css" />-->
+    <!--    <link rel="stylesheet" href="js/sketch.css" type="text/css" />-->
     <style type="text/css">
         html { height: 100% }
         body { padding: 0px;
@@ -57,32 +57,32 @@
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
-        // Убавляем кол-во по клику
-        $('.quantity_inner2 .bt_minus2').click(function() {
-            let $input = $(this).parent().find('.quantity2');
-            let count = parseInt($input.val()) - 1;
-            count = count < 1 ? 1 : count;
-            $input.val(count);
-        });
-        // Прибавляем кол-во по клику
-        $('.quantity_inner2 .bt_plus2').click(function() {
-            let $input = $(this).parent().find('.quantity2');
-            let count = parseInt($input.val()) + 1;
-            count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
-            $input.val(parseInt(count));
-        });
-        // Убираем все лишнее и невозможное при изменении поля
-        $('.quantity_inner2 .quantity2').bind("change keyup input click", function() {
-            if (this.value.match(/[^0-9]/g)) {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            }
-            if (this.value == "") {
-                this.value = 1;
-            }
-            if (this.value > parseInt($(this).data('max-count'))) {
-                this.value = parseInt($(this).data('max-count'));
-            }
-        });
+            // Убавляем кол-во по клику
+            $('.quantity_inner2 .bt_minus2').click(function() {
+                let $input = $(this).parent().find('.quantity2');
+                let count = parseInt($input.val()) - 1;
+                count = count < 1 ? 1 : count;
+                $input.val(count);
+            });
+            // Прибавляем кол-во по клику
+            $('.quantity_inner2 .bt_plus2').click(function() {
+                let $input = $(this).parent().find('.quantity2');
+                let count = parseInt($input.val()) + 1;
+                count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
+                $input.val(parseInt(count));
+            });
+            // Убираем все лишнее и невозможное при изменении поля
+            $('.quantity_inner2 .quantity2').bind("change keyup input click", function() {
+                if (this.value.match(/[^0-9]/g)) {
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                }
+                if (this.value == "") {
+                    this.value = 1;
+                }
+                if (this.value > parseInt($(this).data('max-count'))) {
+                    this.value = parseInt($(this).data('max-count'));
+                }
+            });
         });
     </script>
 
@@ -91,16 +91,6 @@
     <link rel="stylesheet" media="all and (orientation:landscape)" href="js/landscape.css">
 </head>
 <body>
-<!-- <div class="quantity_inner">
-    <button class="bt_minus">
-        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-    </button>
-    <input type="text" value="100" size="2" class="quantity" data-max-count="1000" data-min-count="1000" id = "input1"/>
-    <h10 id = "dollar" size="2">$</h10>
-    <button class="bt_plus">
-        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-    </button>
-</div> -->
 <div id="rectangle">
     <button id = "back" onClick=back()>❮back</button>
     <div id="rectangle2">
@@ -110,15 +100,6 @@
 <div id="rectanglebig">
     <button id = "start" onClick=start()>BET</button>
     <h9 id = "bet_amount" size="2">Bet amount</h9>
-    <div class="quantity_inner2">
-        <input type="text" value="1" size="2" class="quantity2" data-max-count="6" id = "input2"/>
-        <button class="bt_plus2">
-            <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
-        </button>
-        <button class="bt_minus2">
-            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-    </div>
     <div class="quantity_inner">
         <button class="bt_minus">
             <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
@@ -127,6 +108,16 @@
         <h10 id = "dollar" size="2">$</h10>
         <button class="bt_plus">
             <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+    </div>
+    <h9 id = "bet_chance" size="2">Bet chance</h9>
+    <div class="quantity_inner2">
+        <input type="text" value="1" size="2" class="quantity2" data-max-count="6" id = "input2"/>
+        <button class="bt_plus2">
+            <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+        <button class="bt_minus2">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
     </div>
 </div>
