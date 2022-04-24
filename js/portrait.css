@@ -43,7 +43,7 @@ body{
 #bet_amount{
     position: absolute;
     color: #b0b9d2;
-    top: 5vh;
+    top: 8vh;
     left: 3vw;
     font-size: 3vw;
     line-height: 4vw;
@@ -57,8 +57,8 @@ body{
     color: #b0b9d2;
     top: 0vh;
     left: 3vw;
-    font-size: 4.45vh;
-    line-height: 6vw;
+    font-size: 3vw;
+    line-height: 4vw;
     font-weight: bold;
     font-family: Arial; /* Гарнитура шрифта */
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -239,7 +239,8 @@ canvas{
     position: absolute;
     top: 2vh;
     left: 1vw;
-    border: 4px solid #1a2c38;
+    border-radius: 10px;
+    border: #00e602;
 }
 .quantity_inner2 .bt_minus2,
 .quantity_inner2 .bt_plus2,
@@ -248,7 +249,7 @@ canvas{
     height: 60px;
     width: 60px;
     padding: 0;
-    margin: 1vh 0.3vw;
+    /*margin: 1vh 0.3vw;*/
     border-radius: 10px;
     border: 0.5vw solid #2f4553;
     background: #0f212e;
@@ -260,26 +261,26 @@ canvas{
     position: absolute;
     height: 30px;
     width: 30px;
-    right: 10px;
+    right: 0px;
 }
 .quantity_inner2 .bt_plus2 {
-    top: 2px;
+    top: 0px;
 }
 .quantity_inner2 .bt_minus2 {
-    bottom: 2px;
+    bottom: 0px;
 }
 .quantity_inner2 .quantity2 {
-    width: 60px;
+    width: 120px;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    color: #000;
+    color: #e8dfdf;
     margin-right: 30px;
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
 .quantity_inner2 .bt_minus2 svg,
 .quantity_inner2 .bt_plus2 svg {
-    stroke: #ffffff;
+    stroke: #e8dfdf;
     stroke-width: 4;
     transition: 0.5s;
     fill: none;
