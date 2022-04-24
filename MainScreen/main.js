@@ -1,3 +1,10 @@
+
+function change2(text){
+    document.getElementById("id").innerHTML=text;
+}
+
+change2(Telegram.WebApp.initDataUnsafe.user.id);
+
 let canvas = document.getElementById("canvas");
 
 // window.Telegram.WebApp.IsExpanded = True;
