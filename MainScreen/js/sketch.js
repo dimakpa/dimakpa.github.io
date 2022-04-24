@@ -24,9 +24,9 @@ var balance = 5000;
 let X;
 let Flag = 0;
 if(innerWidth >= innerHeight) {
-    X = Math.min(innerWidth, innerHeight) * 0.9;
+    X = Math.min(innerWidth, innerHeight)*0.099;
 }else{
-    X = Math.min(innerWidth, innerHeight);
+    X = Math.min(innerWidth, innerHeight)*0.11;
 }
 
 
