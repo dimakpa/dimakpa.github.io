@@ -43,7 +43,7 @@ body{
 #bet_amount{
     position: absolute;
     color: #b0b9d2;
-    top: 8vh;
+    top: 6.5vh;
     left: 3vw;
     font-size: 3vw;
     line-height: 4vw;
@@ -237,7 +237,7 @@ canvas{
 .quantity_inner2 {
     display: flex;
     position: absolute;
-    top: 2vh;
+    top: 2.5vh;
     left: 1vw;
     border-radius: 10px;
     border: #00e602;
@@ -246,7 +246,7 @@ canvas{
 .quantity_inner2 .bt_plus2,
 .quantity_inner2 .quantity2 {
     color: #ffffff;
-    height: 60px;
+    height: 80px;
     width: 60px;
     padding: 0;
     /*margin: 1vh 0.3vw;*/
@@ -259,8 +259,8 @@ canvas{
 .quantity_inner2 .bt_minus2,
 .quantity_inner2 .bt_plus2 {
     position: absolute;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     right: 0px;
 }
 .quantity_inner2 .bt_plus2 {
