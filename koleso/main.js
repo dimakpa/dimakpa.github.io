@@ -275,7 +275,7 @@ function start() {
 
 
 function back() {
-    window.open('http://dimakpa.github.io/MainScreen', '_self').focus();
+    window.open('/MainScreen/index.html/', '_self').focus();
 }
 
 let csz = null;
