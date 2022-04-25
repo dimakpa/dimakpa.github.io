@@ -29,7 +29,7 @@ if(innerWidth >= innerHeight) {
 }
 
 var rParticle = X*0.015;
-var rPlinko = X*0.016;
+var rPlinko = X*0.02;
 function setup() {
     createCanvas(X,X);
     colorMode(HSB);
@@ -83,11 +83,11 @@ function setup() {
         }
     }
 
-    var b = new Boundary(width /2, height + X*0.03, width, X*0.07);
+    var b = new Boundary(width /2, height + X*0.07, width, X*0.07);
     bounds.push(b);
     for (var i = 0; i < cols+2; i++) {
         var x = i * spacingX;
-        var h = X*0.1915;
+        var h = X*0.1915/5;
         var w = h/30;
         var y = height - h / 2;
         var b = new Boundary(x, y, w, h);
@@ -99,31 +99,31 @@ function setup() {
     bounds.push(b);
 
     //боксы для подсчета
-    var b = new Box(X/13/2, height-h/4, X*0.9/cols, h/3, "#1CF80D", 26);
+    var b = new Box(X/13/2, height-h/4, X*0.9/cols, X*0.1915/3, "#1CF80D", 26);
     bounds.push(b);
-    var b = new Box(X/13/2*3, height-h/4, X*0.9/cols, h/3, "#6dde00", 9);
+    var b = new Box(X/13/2*3, height-h/4, X*0.9/cols, X*0.1915/3, "#6dde00", 9);
     bounds.push(b);
-    var b = new Box(X/13/2*5, height-h/4, X*0.9/cols, h/3, "#2fa101", 4);
+    var b = new Box(X/13/2*5, height-h/4, X*0.9/cols, X*0.1915/3, "#2fa101", 4);
     bounds.push(b);
-    var b = new Box(X/13/2*7, height-h/4, X*0.9/cols, h/3, "#466c79", 2);
+    var b = new Box(X/13/2*7, height-h/4, X*0.9/cols, X*0.1915/3, "#466c79", 2);
     bounds.push(b);
-    var b = new Box(X/13/2*9, height-h/4, X*0.9/cols, h/3, "#31415e", 0.6);
+    var b = new Box(X/13/2*9, height-h/4, X*0.9/cols, X*0.1915/3, "#31415e", 0.6);
     bounds.push(b);
-        var b = new Box(X/13/2*11, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.4);
+        var b = new Box(X/13/2*11, height-h/4, X*0.9/cols, X*0.1915/3, "#2d313a", 0.4);
     bounds.push(b);
-    var b = new Box(X/13/2*13, height-h/4, X*0.9/cols, h/3, "#1b1f2a", 0.2);
+    var b = new Box(X/13/2*13, height-h/4, X*0.9/cols, X*0.1915/3, "#1b1f2a", 0.2);
     bounds.push(b);
-    var b = new Box(X/13/2*15, height-h/4, X*0.9/cols, h/3, "#2d313a", 0.4);
+    var b = new Box(X/13/2*15, height-h/4, X*0.9/cols, X*0.1915/3, "#2d313a", 0.4);
     bounds.push(b);
-    var b = new Box(X/13/2*17, height-h/4, X*0.9/cols, h/3, "#31415e", 0.6);
+    var b = new Box(X/13/2*17, height-h/4, X*0.9/cols, X*0.1915/3, "#31415e", 0.6);
     bounds.push(b);
-    var b = new Box(X/13/2*19, height-h/4, X*0.9/cols, h/3, "#466c79", 2);
+    var b = new Box(X/13/2*19, height-h/4, X*0.9/cols, X*0.1915/3, "#466c79", 2);
     bounds.push(b);
-    var b = new Box(X/13/2*21, height-h/4, X*0.9/cols, h/3, "#2fa101", 4);
+    var b = new Box(X/13/2*21, height-h/4, X*0.9/cols, X*0.1915/3, "#2fa101", 4);
     bounds.push(b);
-    var b = new Box(X/13/2*23, height-h/4, X*0.9/cols, h/3, "#6dde00", 9);
+    var b = new Box(X/13/2*23, height-h/4, X*0.9/cols, X*0.1915/3, "#6dde00", 9);
     bounds.push(b);
-    var b = new Box(X/13/2*25, height-h/4, X*0.9/cols, h/3, "#1CF80D", 26);
+    var b = new Box(X/13/2*25, height-h/4, X*0.9/cols, X*0.1915/3, "#1CF80D", 26);
     bounds.push(b);
 }
 
