@@ -1,4 +1,7 @@
 
+window.Telegram.WebApp.MainButton.isVisible = true;
+
+
 let canvas = document.getElementById("canvas1");
 
 // window.Telegram.WebApp.IsExpanded = True;
