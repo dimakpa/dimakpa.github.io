@@ -28,14 +28,14 @@ if(innerWidth >= innerHeight) {
     X = Math.min(innerWidth, innerHeight);
 }
 
-var rParticle = X*0.024;
-var rPlinko = X*0.013;
+var rParticle = X*0.022;
+var rPlinko = X*0.016;
 function setup() {
     createCanvas(X,X);
     colorMode(HSB);
     engine = Engine.create();
     world = engine.world;
-    world.gravity.y = 0.5;
+    world.gravity.y = 0.3;
 
     //рассмотрение столкновения с полом
     function collision(event) {
