@@ -28,7 +28,7 @@ if(innerWidth >= innerHeight) {
     X = Math.min(innerWidth, innerHeight);
 }
 
-var rParticle = X*0.025;
+var rParticle = X*0.018;
 var rPlinko = X*0.02;
 function setup() {
     createCanvas(X,X);
