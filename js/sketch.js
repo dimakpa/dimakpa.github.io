@@ -179,7 +179,7 @@ function back() {
 
 function draw() {
     if(particles[0]){
-        particles[0].show();
+        //particles[0].show();
     }
     //background("#28525c");
     background("#FFE4B5");
