@@ -28,8 +28,8 @@ if(innerWidth >= innerHeight) {
     X = Math.min(innerWidth, innerHeight);
 }
 
-var rParticle = X*0.0172;
-var rPlinko = X*0.02;
+var rParticle = X*0.015;
+var rPlinko = X*0.016;
 function setup() {
     createCanvas(X,X);
     colorMode(HSB);
