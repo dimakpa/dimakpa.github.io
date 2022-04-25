@@ -139,7 +139,7 @@ function newParticle() {
     }else if(document.getElementById('input2').value == 3){
         var x = RandomParticle(X/2 - X*0.14, X/2 + X*0.057);
     }else if(document.getElementById('input2').value == 4){
-        var x = RandomParticle(X/2 - X*0.19, X/2 + X*0.062);
+        var x = RandomParticle(X/2 - X*0.19, X/2 + X*0.4);
     }else if(document.getElementById('input2').value == 5){
         var x = RandomParticle(X/2 - X*0.23, X/2 + X*0.069);
     }else if(document.getElementById('input2').value == 6){
