@@ -1,4 +1,4 @@
-
+window.Telegram.WebApp.IsExpanded = True;
 
 let canvas = document.getElementById("canvas1");
 
