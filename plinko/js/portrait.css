@@ -259,8 +259,8 @@ canvas{
 .quantity_inner2 .bt_minus2,
 .quantity_inner2 .bt_plus2 {
     position: absolute;
-    height: 35px;
-    width: 35px;
+    height: 12px;
+    width: 12px;
     right: 0px;
 }
 .quantity_inner2 .bt_plus2 {
@@ -270,7 +270,7 @@ canvas{
     bottom: 1px;
 }
 .quantity_inner2 .quantity2 {
-    width: 120px;
+    width: 100px;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
