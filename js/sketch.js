@@ -28,7 +28,7 @@ if(innerWidth >= innerHeight) {
     X = Math.min(innerWidth, innerHeight);
 }
 
-var rParticle = X*0.015;
+var rParticle = X*0.025;
 var rPlinko = X*0.02;
 function setup() {
     createCanvas(X,X);
@@ -87,7 +87,7 @@ function setup() {
     bounds.push(b);
     for (var i = 0; i < cols+2; i++) {
         var x = i * spacingX;
-        var h = X*0.1915/5;
+        var h = X*0.04;
         var w = h/30;
         var y = height - h / 2;
         var b = new Boundary(x, y, w, h);
