@@ -1,5 +1,5 @@
 
-window.Telegram.WebApp.MainButton.isVisible = true;
+// window.Telegram.WebApp.MainButton.isVisible = true;
 
 
 let canvas = document.getElementById("canvas1");
