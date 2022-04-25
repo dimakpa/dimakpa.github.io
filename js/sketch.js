@@ -135,15 +135,15 @@ function newParticle() {
     if (document.getElementById('input2').value == 1){
         var x = RandomParticle(X/2 - X*0.05, X/2 + X*0.05);
     }else if(document.getElementById('input2').value == 2){
-        var x = RandomParticle(X/2 - X*0.09, X/2 + X*0.07);
+        var x = RandomParticle(X/2 - X*0.09, X/2 + X*0.052);
     }else if(document.getElementById('input2').value == 3){
-        var x = RandomParticle(X/2 - X*0.14, X/2 + X*0.09);
+        var x = RandomParticle(X/2 - X*0.14, X/2 + X*0.057);
     }else if(document.getElementById('input2').value == 4){
-        var x = RandomParticle(X/2 - X*0.19, X/2 + X*0.11);
+        var x = RandomParticle(X/2 - X*0.19, X/2 + X*0.062);
     }else if(document.getElementById('input2').value == 5){
-        var x = RandomParticle(X/2 - X*0.23, X/2 + X*0.13);
+        var x = RandomParticle(X/2 - X*0.23, X/2 + X*0.069);
     }else if(document.getElementById('input2').value == 6){
-        var x = RandomParticle(X/2 - X*0.27, X/2 + X*0.15);
+        var x = RandomParticle(X/2 - X*0.27, X/2 + X*0.077);
     }
      //var x = RandomParticle(X/2 - X*0.3, X/2 + X*0.3);
     // //var x = RandomParticle(X/2 - X*0.05, X/2 + X*0.05);
