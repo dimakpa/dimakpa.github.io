@@ -9,7 +9,7 @@ var particles = [];
 var plinkos = [];
 var bounds = [];
 var cols = 13;
-var rows = 9;
+var rows = 10;
 var buttoon
 var click =1;
 var balance = 5000;
@@ -35,7 +35,7 @@ function setup() {
     colorMode(HSB);
     engine = Engine.create();
     world = engine.world;
-    world.gravity.y = 1;
+    world.gravity.y = 0.5;
 
     //рассмотрение столкновения с полом
     function collision(event) {
