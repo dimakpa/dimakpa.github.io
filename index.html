@@ -85,30 +85,8 @@
    });
 
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
-      tg.sendData('''{ 
-                  "employees" : [
-                   {
-                     "id":1,
-                     "name":"first",
-                     "description":"first desc",
-                     "in_stock":23,
-                     "price":100,
-                     "image":"/none",
-                     "manufacturer":1
-                  },
-                  {
-                     "id":2,
-                     "name":"second",
-                     "description":"second desc",
-                     "in_stock":233,
-                     "price":12,
-                     "image":"/none",
-                     "manufacturer":1
-                  }
-                  ] 
-                  }
-   '''
-   ); 
+      tg.sendData('{ "employees" :[{"id":1,"name":"first","description":"first desc","in_stock":23,"price":100,"image":"/none","manufacturer":1},{"id":2,"name":"second","description":"second desc","in_stock":233,"price":12,"image":"/none","manufacturer":1}]}' );
+      
       //при клике на основную кнопку отправляем данные в строковом виде
    });
 
