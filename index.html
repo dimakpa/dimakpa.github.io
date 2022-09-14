@@ -85,7 +85,7 @@
    });
 
    Telegram.WebApp.onEvent('mainButtonClicked', function(){
-      tg.sendData("[{"id":1,"name":"first","description":"first desc","in_stock":23,"price":100,"image":"/none","manufacturer":1},{"id":2,"name":"second","description":"second desc","in_stock":233,"price":12,"image":"/none","manufacturer":1}]"); 
+      tg.sendData('[{"id":1,"name":"first","description":"first desc","in_stock":23,"price":100,"image":"/none","manufacturer":1},{"id":2,"name":"second","description":"second desc","in_stock":233,"price":12,"image":"/none","manufacturer":1}]'); 
       //при клике на основную кнопку отправляем данные в строковом виде
    });
 
@@ -102,8 +102,8 @@
    let userid = document.createElement('p'); //создаем еще параграф 
    userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
    usercard.appendChild(userid); //добавляем
-
-
+   
+  
    //работает только в attachment menu
    // let pic = document.createElement('img'); //создаем img
    // pic.src = tg.initDataUnsafe.user.photo_url; //задаём src 
